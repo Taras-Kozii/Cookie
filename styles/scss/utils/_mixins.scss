@@ -1,0 +1,206 @@
+@use "sass:math";
+@use "vars" as *;
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ФУНКЦІЇ
+
+// //Percent
+// @function percent($px, $from: 100) {
+//   $result: math.div($px, $from) * 100%;
+//   @return $result;
+// }
+
+// //REM
+// @function to-rem($px, $current: 16) {
+//   $result: math.div($px, $current) + rem;
+//   @return $result;
+// }
+
+// //EM
+// @function to-em($px, $current: 16) {
+//   $result: math.div($px, $current) + em;
+//   @return $result;
+// }
+
+@function get-value($min-width, $max-width, $size-at-min-width, $size-at-max-width, $unit) {
+  $return-value: calc(#{$size-at-min-width + $unit} + (#{$size-at-max-width - $size-at-min-width}) * ((100vw - #{$min-width + $unit}) / (#{$max-width - $min-width})));
+  @return $return-value;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// АДАПТИВНА ВЛАСТИВІСТЬ
+
+@mixin adaptive-property($property,
+  $mobile-size,
+  $tablet-size,
+  $desktop-size,
+  $unit: px) {
+  $max-width: 1440;
+  $min-width: 320;
+  $tablet-width: 767.98;
+
+  @if ($unit ==rem) {
+    $max-width: math.div(1440, 16);
+    $min-width: math.div(320, 16);
+    $tablet-width: math.div(767.98, 16);
+  }
+
+  @if ($tablet-size ==0) {
+    #{$property}: $desktop-size + $unit;
+
+    @media (max-width: 1440px) {
+      #{$property}: get-value($min-width,
+          $max-width,
+          $mobile-size,
+          $desktop-size,
+          $unit );
+    }
+  }
+
+  @else {
+    #{$property}: get-value($min-width,
+        $tablet-width,
+        $mobile-size,
+        $tablet-size,
+        $unit );
+
+    @media (min-width: 767.98px) {
+      #{$property}: get-value($tablet-width,
+          $max-width,
+          $tablet-size,
+          $desktop-size,
+          $unit );
+    }
+
+    @media (min-width: 1440px) {
+      #{$property}: $desktop-size + $unit;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// БРЕЙКПОІНТИ
+
+@mixin on-desktop {
+  @media (min-width: #{$pc}px) {
+    @content;
+  }
+}
+
+@mixin on-tablet {
+  @media (min-width: #{$tablet}px) {
+    @content;
+  }
+}
+
+// @mixin on-laptop {
+//   @media (max-width: 1024px) {
+//     @content;
+//   }
+// }
+@mixin on-mobile-l {
+  @media (min-width: #{$mobile-l}px) {
+    @content;
+  }
+}
+
+@mixin on-mobile-s {
+  @media (min-width: #{$mobile-s}px) {
+    @content;
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// FLEX
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($x: center, $y: start) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// GRID
+// @mixin grid-cards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
+//   display: grid;
+//   min-width: 0;
+//   gap: $gap;
+//   grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+// }
+
+// @mixin grid-container($quantity) {
+//   display: grid;
+//   min-width: 0;
+//   grid-template-columns: repeat($quantity, minmax(280px, 1fr));
+// }
+
+// HOVER
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@mixin hover() {
+  @media (hover: hover) and (pointer: fine) {
+
+    &:hover,
+    &:focus-within {
+      @content;
+    }
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+
+    &:active,
+    &:focus,
+    &:focus-within {
+      @content;
+    }
+  }
+}
+
+@mixin hover-pseudo($pseudo) {
+  @media (hover: hover) and (pointer: fine) {
+
+    &:hover#{$pseudo},
+    &:focus-within#{$pseudo} {
+      @content;
+    }
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+
+    &:active#{$pseudo},
+    &:focus#{$pseudo},
+    &:focus-within#{$pseudo} {
+      @content;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// @mixin position-r {
+//   position: relative;
+//   left: 0;
+//   top: 0;
+// }
+
+@mixin ibg($size: cover) {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: $size;
+    object-position: center;
+  }
+}
+
+// @mixin p-margin {
+//   &__text p:not(:last-child) {
+//     margin-bottom: 0.625rem;
+//   }
+// }

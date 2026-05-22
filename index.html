@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TITLE</title>
+    <!-- <link rel="shortcut icon" href="" type="image/x-icon" /> -->
+    <!-- ПЕРЕДЗАВАНТАЖЕННЯ КАРТИНОК -->
+    <!-- <link rel="preload" as="image" href="" media="(max-width: 766px)" />
+    <link rel="preload" as="image" href="" media="(min-width: 767px)" /> -->
+
+    <!-- ШРИФТИ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- ------------------------------------------------------------------- -->
+    <link rel="stylesheet" href="./styles/css/styles.min.css" />
+    <!--SWIPER -->
+    <!-- <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      media="print"
+      onload="this.media='all'"
+    /> -->
+  </head>
+  <body class="page right-fix-padding">
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__content">
+            <a href="#" class="logo header__logo logo" aria-label="logo-icon">
+              <img src="" alt="logo" decoding="async" width="44" height="42" />
+            </a>
+            <div class="header__menu menu anim">
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a
+                      href="#"
+                      class="menu__link hover-underline"
+                      data-goto=".hero"
+                      ><span>Головна</span></a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a
+                      href="#"
+                      class="menu__link hover-underline"
+                      data-goto=".hero"
+                      ><span>Головна</span></a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a
+                      href="#"
+                      class="menu__link hover-underline"
+                      data-goto=".hero"
+                      ><span>Головна</span></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <button class="burger midle-hidden"><span></span></button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="main__section hero">
+          <div class="hero__container">
+            <div class="hero__content"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__content"></div>
+        </div>
+      </footer>
+    </div>
+
+    <!--SWIPER -->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script> -->
+    <script type="module" src="./scripts/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

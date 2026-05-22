@@ -1,0 +1,17 @@
+@use "../utils/index" as *;
+
+// .show-top {
+//   opacity: 0;
+//   transform: translate(0, 100px);
+//   filter: blur(33px);
+//   transition: opacity, transform, filter;
+//   transition-duration: $transition-duraction;
+//   transition-timing-function: ease-in-out;
+//   transition-delay: var(--delay);
+
+//   @include hover {
+//     opacity: 1;
+//     transform: translate(0, 0);
+//     filter: blur(0);
+//   }
+// }

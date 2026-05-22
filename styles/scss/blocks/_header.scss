@@ -1,0 +1,36 @@
+@use "../utils/_index" as *;
+
+.header {
+  position: fixed; //sticky
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  transition: $transition-duraction;
+
+  &__content {
+    width: 100%;
+    padding: 10px 0;
+    @include flex(space-between, center);
+  }
+
+  &__menu {
+    column-gap: 10px;
+    @include flex(space-between, center);
+  }
+
+  &__logo {
+    z-index: 5;
+    @include position-r;
+  }
+}
+
+.header.scrolling {
+  background: rgba(79, 79, 84, 0.2);
+  backdrop-filter: blur(18px);
+}
+
+.header.hidden {
+  opacity: 0;
+  transform: translateY(-30px);
+}

@@ -1,0 +1,15 @@
+@use "../../styles/scss/utils/index" as *;
+
+[data-showmore-content] > p,
+[data-showmore-content] > li {
+  max-height: 0;
+  transition: $transition-duraction-long;
+  overflow: hidden;
+}
+
+[data-showmore-content] > p.show,
+[data-showmore-content] > li.show {
+  overflow: visible;
+  max-height: 300px;
+  transition: $transition-duraction-long;
+}

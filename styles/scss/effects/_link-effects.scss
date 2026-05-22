@@ -1,0 +1,165 @@
+@use "../utils/index" as *;
+
+//UNDERLINE
+// .link-underline-show-center {
+//   $before-height: 2px;
+//   color: #000;
+//   cursor: pointer;
+
+//   span {
+//     position: relative;
+//     color: #000;
+
+//     @include hover-pseudo('::before') {
+//       transform: translate(-50%, 0) scaleX(1);
+//     }
+//   }
+
+//   span::before {
+//     content: "";
+//     position: absolute;
+//     left: 50%;
+//     bottom: 0;
+//     width: 100%;
+//     height: $before-height;
+//     background-color: currentColor;
+//     transform-origin: center;
+//     transform: translate(-50%, 0) scaleX(0);
+//     transition: transform $transition-duraction ease-in-out;
+//   }
+// }
+
+// .link-underline-show-left-right {
+//   span {
+//     position: relative;
+
+//     @include hover-pseudo('::before') {
+//       transform-origin: bottom left;
+//       transform: scaleX(1);
+//     }
+//   }
+
+//   span::before {
+//     content: "";
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     height: 2px;
+//     background-color: currentColor;
+//     border-radius: 5px;
+//     transform-origin: bottom right;
+//     transform: scaleX(0);
+//     transition: transform $transition-duraction ease;
+//   }
+// }
+
+// .link-underline-hidden {
+//   span {
+//     position: relative;
+
+//     @include hover-pseudo('::before') {
+//       transform: scaleX(0);
+//       transform-origin: bottom right;
+//     }
+//   }
+
+//   span::before {
+//     content: "";
+//     position: absolute;
+//     height: 2px;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     background-color: currentColor;
+//     transform-origin: bottom left;
+//     transform: scaleX(1);
+//     transition: transform $transition-duraction ease-in-out;
+//   }
+// }
+
+//TEXT COLOR + UNDERLINE
+// .link-fill-color {
+//   position: relative;
+//   display: inline-block;
+//   white-space: nowrap;
+
+//   &::before {
+//     content: attr(data-text);
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     overflow: hidden;
+//     max-width: 0;
+//     border-bottom: 2px solid currentColor;
+//     color: #1699f7;
+//     transition: max-width $transition-duraction ease-in-out;
+//   }
+
+//   @include hover-pseudo("::before") {
+//     max-width: 100%;
+//   }
+// }
+// .link-show-bars {
+//   position: relative;
+//   transition: font-weight $transition-duraction ease;
+
+//   &::before,
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     height: 2px;
+//     background-color: $color-olive;
+//     transform: scaleX(0);
+//     transition: transform $transition-duraction ease;
+//   }
+
+//   &::before {
+//     top: 0;
+//     transform-origin: center right;
+//   }
+//   &::after {
+//     bottom: 0;
+//     transform-origin: center left;
+//   }
+//   @include hover-pseudo("::before") {
+//     transform-origin: center left;
+//     transform: scaleX(1);
+//   }
+//   @include hover-pseudo("::after") {
+//     transform-origin: center right;
+//     transform: scaleX(1);
+//   }
+//   @include hover {
+//     font-weight: 700;
+//   }
+// }
+// .link-show-mask {
+//   display: inline-block;
+//   padding: 5px 2px;
+//   position: relative;
+//   z-index: 1;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     z-index: -1;
+//     top: 0;
+//     bottom: 0;
+//     left: -0.25em;
+//     right: -0.25em;
+//     transform-origin: center right;
+//     transform: scaleX(0);
+//     transition: transform 0.2s ease-in-out;
+//     background-image: url("../../images/line.webp");
+//     background-position: center;
+//     background-size: 100% 110%;
+//     background-repeat: no-repeat;
+//   }
+//   @include hover-pseudo("::before") {
+//     transform: scaleX(1);
+//     transform-origin: center left;
+//   }
+// }
