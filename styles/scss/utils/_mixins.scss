@@ -1,46 +1,22 @@
 @use "sass:math";
 @use "vars" as *;
 
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// ФУНКЦІЇ
-
-// //Percent
-// @function percent($px, $from: 100) {
-//   $result: math.div($px, $from) * 100%;
-//   @return $result;
-// }
-
-// //REM
-// @function to-rem($px, $current: 16) {
-//   $result: math.div($px, $current) + rem;
-//   @return $result;
-// }
-
-// //EM
-// @function to-em($px, $current: 16) {
-//   $result: math.div($px, $current) + em;
-//   @return $result;
-// }
-
 @function get-value($min-width, $max-width, $size-at-min-width, $size-at-max-width, $unit) {
   $return-value: calc(#{$size-at-min-width + $unit} + (#{$size-at-max-width - $size-at-min-width}) * ((100vw - #{$min-width + $unit}) / (#{$max-width - $min-width})));
   @return $return-value;
 }
-
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// АДАПТИВНА ВЛАСТИВІСТЬ
 
 @mixin adaptive-property($property,
   $mobile-size,
   $tablet-size,
   $desktop-size,
   $unit: px) {
-  $max-width: 1440;
+  $max-width: 1466;
   $min-width: 320;
   $tablet-width: 767.98;
 
   @if ($unit ==rem) {
-    $max-width: math.div(1440, 16);
+    $max-width: math.div(1466, 16);
     $min-width: math.div(320, 16);
     $tablet-width: math.div(767.98, 16);
   }
@@ -48,7 +24,7 @@
   @if ($tablet-size ==0) {
     #{$property}: $desktop-size + $unit;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1466px) {
       #{$property}: get-value($min-width,
           $max-width,
           $mobile-size,
@@ -72,7 +48,7 @@
           $unit );
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: 1466px) {
       #{$property}: $desktop-size + $unit;
     }
   }
@@ -82,7 +58,7 @@
 // БРЕЙКПОІНТИ
 
 @mixin on-desktop {
-  @media (min-width: #{$pc}px) {
+  @media (min-width: 1440px) {
     @content;
   }
 }
