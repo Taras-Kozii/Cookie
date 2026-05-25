@@ -586,8 +586,8 @@ h6 {
     height: 100svh;
     width: 100%;
     padding: 100px 30px 30px;
-    background: -webkit-gradient(linear, left bottom, left top, from(#f0eeee), color-stop(40%, #f5f5f5), to(#5f5f6b));
-    background: linear-gradient(0deg, #f0eeee 0%, #f5f5f5 40%, #5f5f6b 100%);
+    background: -webkit-gradient(linear, left bottom, left top, from(#e093a0), to(#ecddce));
+    background: linear-gradient(0deg, #e093a0 0%, #ecddce 100%);
     -webkit-transition: 0.3s;
     transition: 0.3s;
     overflow: auto;
@@ -599,7 +599,6 @@ h6 {
     height: 80px;
     left: -100%;
     top: 0;
-    background: rgba(95, 95, 107, 0.1);
     backdrop-filter: blur(5px);
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -659,7 +658,7 @@ h6 {
   left: 0;
 }
 
-.both-hidden span:before, .rotate span:before, .rotate span:after, .burger:after, .burger:before, .burger span {
+.burger:after, .burger:before, .burger span {
   display: block;
   position: absolute;
   top: 50%;
@@ -736,128 +735,4 @@ h6 {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-}
-
-.rotate:before, .rotate:after {
-  display: none;
-}
-.rotate span {
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
-}
-.rotate span:before, .rotate span:after {
-  content: "";
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
-  top: 0;
-  left: 0;
-}
-.rotate span:before {
-  -webkit-transform: translateY(-15px);
-      -ms-transform: translateY(-15px);
-          transform: translateY(-15px);
-}
-.rotate span:after {
-  -webkit-transform: translateY(15px);
-      -ms-transform: translateY(15px);
-          transform: translateY(15px);
-}
-.rotate.active span {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.rotate.active span:before, .rotate.active span:after {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.midle-hidden:before, .midle-hidden:after,
-.midle-hidden span {
-  -webkit-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out;
-}
-.midle-hidden.active:before {
-  -webkit-transform: rotate(135deg);
-      -ms-transform: rotate(135deg);
-          transform: rotate(135deg);
-  margin-top: -1.5px;
-}
-.midle-hidden.active:after {
-  -webkit-transform: rotate(-135deg);
-      -ms-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-  margin-top: -1.5px;
-}
-.midle-hidden.active span {
-  opacity: 0;
-  -webkit-transform: translateX(150%);
-      -ms-transform: translateX(150%);
-          transform: translateX(150%);
-}
-
-.both-hidden:before, .both-hidden:after {
-  -webkit-transition: 0.2s ease 0.2s;
-  transition: 0.2s ease 0.2s;
-}
-.both-hidden:after {
-  left: auto;
-  right: 0;
-}
-.both-hidden span {
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-.both-hidden span:before {
-  content: "";
-  -webkit-transition: inherit;
-  transition: inherit;
-  left: 0;
-  top: 0;
-}
-.both-hidden.active:before, .both-hidden.active:after {
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-  width: 0;
-}
-.both-hidden.active span {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition: 0.2s ease 0.2s;
-  transition: 0.2s ease 0.2s;
-}
-.both-hidden.active span:before {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.dott:before, .dott:after {
-  -webkit-transition-property: margin, opacity;
-  transition-property: margin, opacity;
-  -webkit-transition-duration: 0.25s, 0s;
-          transition-duration: 0.25s, 0s;
-  -webkit-transition-delay: 0.25s;
-          transition-delay: 0.25s;
-}
-.dott span {
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
-}
-.dott.active span {
-  width: 12.00120012px;
-  height: 12.00120012px;
-  margin-top: -6.00060006px;
-  left: 12.00120012px;
-  border-radius: 50%;
-  -webkit-transition-delay: 0.25s;
-          transition-delay: 0.25s;
-}
-.dott.active:before, .dott.active:after {
-  margin-top: 0;
-  opacity: 0;
-  -webkit-transition-delay: 0s, 0.25s;
-          transition-delay: 0s, 0.25s;
 }

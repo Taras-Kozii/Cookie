@@ -1,4 +1,3 @@
-//=======================================BURGER 1 SPAN ==========================
 $menu-size: 40px;
 $line-height: 3px;
 $gap: $line-height * 5;
@@ -50,8 +49,6 @@ $radius: 0;
   }
 }
 
-//Зсув до центру
-// =============================================
 .translate-center {
   span {
     transition: 0.2s ease-in-out 0.2s;
@@ -82,152 +79,6 @@ $radius: 0;
 
     &:after {
       transform: rotate(-45deg);
-    }
-  }
-}
-
-// Обертання
-// =============================================
-.rotate {
-  &:before,
-  &:after {
-    display: none;
-  }
-
-  span {
-    transition: 0.25s ease;
-
-    &:before,
-    &:after {
-      @extend %menu-dash;
-      content: "";
-      transition: 0.25s ease;
-      top: 0;
-      left: 0;
-    }
-
-    &:before {
-      transform: translateY(-$gap);
-    }
-
-    &:after {
-      transform: translateY($gap);
-    }
-  }
-
-  &.active {
-    span {
-      transform: rotate(45deg);
-
-      &:before,
-      &:after {
-        transform: rotate(90deg);
-      }
-    }
-  }
-}
-
-// Cередина відїжає вправо і зникає
-// // =============================================
-.midle-hidden {
-  &:before,
-  &:after,
-  span {
-    transition: 0.25s ease-in-out;
-  }
-
-  &.active {
-    &:before {
-      transform: rotate(135deg);
-      margin-top: $line-height / -2;
-    }
-
-    &:after {
-      transform: rotate(-135deg);
-      margin-top: $line-height / -2;
-    }
-
-    span {
-      opacity: 0;
-      transform: translateX(150%);
-    }
-  }
-}
-
-// Верх і низ плавно зникає в різні боки
-// =============================================
-.both-hidden {
-  &:before,
-  &:after {
-    transition: 0.2s ease 0.2s;
-  }
-
-  &:after {
-    left: auto;
-    right: 0;
-  }
-
-  span {
-    transition: 0.2s;
-
-    &:before {
-      @extend %menu-dash;
-      content: "";
-      transition: inherit;
-      left: 0;
-      top: 0;
-    }
-  }
-
-  &.active {
-    &:before,
-    &:after {
-      transition: 0.2s ease;
-      width: 0;
-    }
-
-    span {
-      transform: rotate(45deg);
-      transition: 0.2s ease 0.2s;
-
-      &:before {
-        transform: rotate(-90deg);
-      }
-    }
-  }
-}
-
-//Бургер стає крапкою
-// =============================================
-.dott {
-  &:before,
-  &:after {
-    transition-property: margin, opacity;
-    transition-duration: 0.25s, 0s;
-    transition-delay: 0.25s;
-  }
-
-  span {
-    transition: 0.25s ease;
-  }
-
-  &.active {
-    span {
-      $menu-dott: $menu-size / 3.333;
-
-      width: $menu-dott;
-      height: $menu-dott;
-      margin-top: $menu-dott / -2;
-      left: $menu-dott;
-      border-radius: 50%;
-      transition-delay: 0.25s;
-    }
-
-    &:before,
-    &:after {
-      margin-top: 0;
-      opacity: 0;
-      transition-delay: 0s, 0.25s;
     }
   }
 }
