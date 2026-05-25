@@ -3,8 +3,63 @@
 .footer {
   background-color: $text-color-main;
   color: $bg-color-main;
+  &__container {
+  max-width: 1320px;
+	margin-inline: auto;
+	overflow-x: clip;
+  @include adaptive-property(padding-inline, 15, 0, 36);
+  }
   &__content {
+    display: flex;
+    flex-direction: column;
+    @include adaptive-property(row-gap, 52, 0,  108);
     @include adaptive-property(padding-top, 70, 0, 132);
     @include adaptive-property(padding-bottom, 40, 0, 89);
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bottom {
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-between;
+    align-items:end;
+  }
+  &__lang {
+    align-self: start;
+  }
+  @media (max-width: 600px) {
+    .footer__top {
+      flex-wrap: wrap;
+      column-gap: 10px;
+      justify-content: space-evenly;
+    }
+    .logo--footer {
+      order: 1;
+    }
+    .footer__lang {
+      order: 2;
+      @include adaptive-property(margin-bottom, 52, 0,  108);
+    }
+    .footer-menu {
+      order: 3;
+    }
+  }
+}
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 120px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  &__link {
+    font-weight: 700;
+    color: $bg-color-main;
+    @include adaptive-property(font-size, 0.875, 0, 1.125, rem);
   }
 }

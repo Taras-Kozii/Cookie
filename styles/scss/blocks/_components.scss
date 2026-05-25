@@ -15,8 +15,6 @@
   color: $text-color-main;
   @include adaptive-property(font-size, 1.5, 2.5, 2.5, rem);
 }
-
-//=================================BUTTON=============================
 .button {
   width: min(100%, 480px);
   position: relative;
@@ -40,6 +38,8 @@
   z-index: 1;
   overflow: hidden;
 }
+
+
 .buttons-lang {
   display: flex;
   column-gap: 7px;
@@ -48,7 +48,7 @@
     width: 1px;
   }
   &__lang {
-    font-size: 1.125rem;
+    @include adaptive-property(font-size, 0.875, 0, 1.125, rem);
     text-transform: uppercase;
   }
   &__lang--bold {
@@ -63,6 +63,31 @@
     width: 1px;
   }
     &__link {
-      font-size: 1.125rem;
+      @include adaptive-property(font-size, 0.875, 0, 1.125, rem);
     }
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+    @include adaptive-property(row-gap, 1, 0, 1.625, rem);
+  &__title {
+    width: fit-content;
+    text-align: center;
+    font-weight: 700;
+    @include adaptive-property(font-size, 1.125, 0 1.5, rem);
+  }
+  &__list {
+    display: flex;
+    column-gap: 14px;
+    align-items: center;
+  }
+}
+.logo {
+  @include adaptive-property(width, 90, 0, 180);
+  @include adaptive-property(height, 25, 0, 52);
+  @include ibg(contain);
+}
+.logo--footer {
+  @include adaptive-property(width, 125, 0, 250);
+  @include adaptive-property(height, 32, 0, 72);
 }

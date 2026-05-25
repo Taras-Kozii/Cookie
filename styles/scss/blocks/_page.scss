@@ -28,9 +28,9 @@
 		min-width: 0;
 	}
 }
-[class*="__container"] {
-	max-width: 1165px;
-	padding-inline: #{math.div($container-padding, 2)}px;
-	margin-inline: auto;
-	overflow-x: clip;
-}
+// [class*="__container"] {
+// 	max-width: 1165px;
+// 	padding-inline: #{math.div($container-padding, 2)}px;
+// 	margin-inline: auto;
+// 	overflow-x: clip;
+// }

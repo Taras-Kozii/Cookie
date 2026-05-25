@@ -25,3 +25,12 @@ footer__container 1284 + 36 = 1320
 header__container 1330
 
 white-section__container 1129 + 36 = 1165px
+
+
+
+
+
+
+
+
+
