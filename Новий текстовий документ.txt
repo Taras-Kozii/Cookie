@@ -1,28 +1,10 @@
-Kollektif	Regular	87
-Kollektif	Bold	68
-Lena		Regular	15 кнопка слоган
 
-
-18px	66× 	ОСНОВНИЙ	
 20px	57×	
 24px	6×	СПОЙЛЕРИ
 25px	14×	
 30px	24×	H3(ЗАГОЛОВКИ КАРТОЧОК, STEP)	
 40px	2×	
 50px	7×	H1
-
-
-ПОЛОТНО 1466PX
-HEADER 	padding-inline: 68px
-	padding-block: 21px
-	header 94px
-
-
-	bottom-padding 89
-
-footer__container 1284 + 36 = 1320
-
-header__container 1330
 
 white-section__container 1129 + 36 = 1165px
 

@@ -17,7 +17,7 @@ export function initNavigation() {
     navLinks.forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
-        scrollToBlock(link);
+        // scrollToBlock(link);
 
         if (burger.classList.contains('active')) {
           lockPage();

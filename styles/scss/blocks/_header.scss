@@ -8,9 +8,16 @@
   z-index: 50;
   transition: $transition-duraction;
 
+  &__container {
+    max-width: 1366px;
+    margin-inline: auto;
+    overflow-x: clip;
+    @include adaptive-property(padding-inline, 15, 0, 36);
+  }
+
   &__content {
     width: 100%;
-    padding: 10px 0;
+    padding-block: 21px;
     @include flex(space-between, center);
   }
 

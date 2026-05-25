@@ -4,15 +4,15 @@
   background-color: $text-color-main;
   color: $bg-color-main;
   &__container {
-  max-width: 1320px;
-	margin-inline: auto;
-	overflow-x: clip;
-  @include adaptive-property(padding-inline, 15, 0, 36);
+    max-width: 1320px;
+    margin-inline: auto;
+    overflow-x: clip;
+    @include adaptive-property(padding-inline, 15, 0, 36);
   }
   &__content {
     display: flex;
     flex-direction: column;
-    @include adaptive-property(row-gap, 52, 0,  108);
+    @include adaptive-property(row-gap, 52, 0, 108);
     @include adaptive-property(padding-top, 70, 0, 132);
     @include adaptive-property(padding-bottom, 40, 0, 89);
   }
@@ -24,7 +24,7 @@
     display: flex;
     column-gap: 20px;
     justify-content: space-between;
-    align-items:end;
+    align-items: end;
   }
   &__lang {
     align-self: start;
@@ -40,7 +40,7 @@
     }
     .footer__lang {
       order: 2;
-      @include adaptive-property(margin-bottom, 52, 0,  108);
+      @include adaptive-property(margin-bottom, 52, 0, 108);
     }
     .footer-menu {
       order: 3;

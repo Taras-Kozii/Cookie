@@ -1,4 +1,4 @@
-$font-family: "Kollektif";
+$font-family: "Kollektif"; // Шрифт за замовчуванням
 $text-color-main: #000;
 $bg-color-main: #fff;
 $bg-color-pink: #eddecf;
@@ -15,6 +15,7 @@ $max-width-container: 1170;
 $container-padding: 30;
 $container-width: $max-width-container + $container-padding;
 
+// Брейк-поїнти
 $pc: $container-width; // ПК, ноутбуки, деякі планшети у горизонтальному положенні
 $tablet: 991.98; // Планшети, деякі телефони в горизонтальному положенні
 $mobile-l: 767.98; // Телефони L
