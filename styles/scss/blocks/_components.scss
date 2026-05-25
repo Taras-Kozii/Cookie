@@ -40,16 +40,29 @@
   z-index: 1;
   overflow: hidden;
 }
-
-// ==============================LOGO
-.logo {
+.buttons-lang {
   display: flex;
-  align-items: center;
-
-  &__img {
-    display: block;
-    aspect-ratio: 1 / 1;
-    @include adaptive-property(width, 42, 0, 60);
-    @include ibg;
+  column-gap: 7px;
+  &__line {
+    background-color: $bg-color-main;
+    width: 1px;
   }
+  &__lang {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+  }
+  &__lang--bold {
+    font-weight: bold;
+  }
+}
+.privacy {
+    display: flex;
+    column-gap: 7px;
+    &__line {
+    background-color: $bg-color-main;
+    width: 1px;
+  }
+    &__link {
+      font-size: 1.125rem;
+    }
 }

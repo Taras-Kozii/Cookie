@@ -5,7 +5,6 @@
   $return-value: calc(#{$size-at-min-width + $unit} + (#{$size-at-max-width - $size-at-min-width}) * ((100vw - #{$min-width + $unit}) / (#{$max-width - $min-width})));
   @return $return-value;
 }
-
 @mixin adaptive-property($property,
   $mobile-size,
   $tablet-size,
@@ -54,15 +53,11 @@
   }
 }
 
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// БРЕЙКПОІНТИ
-
 @mixin on-desktop {
   @media (min-width: 1440px) {
     @content;
   }
 }
-
 @mixin on-tablet {
   @media (min-width: #{$tablet}px) {
     @content;
@@ -79,22 +74,16 @@
     @content;
   }
 }
-
 @mixin on-mobile-s {
   @media (min-width: #{$mobile-s}px) {
     @content;
   }
 }
-
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// FLEX
-
 @mixin flex-center() {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 @mixin flex($x: center, $y: start) {
   display: flex;
   justify-content: $x;
@@ -136,7 +125,6 @@
     }
   }
 }
-
 @mixin hover-pseudo($pseudo) {
   @media (hover: hover) and (pointer: fine) {
 
@@ -155,15 +143,6 @@
     }
   }
 }
-
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-// @mixin position-r {
-//   position: relative;
-//   left: 0;
-//   top: 0;
-// }
-
 @mixin ibg($size: cover) {
   overflow: hidden;
 
@@ -174,9 +153,9 @@
     object-position: center;
   }
 }
-
-// @mixin p-margin {
-//   &__text p:not(:last-child) {
-//     margin-bottom: 0.625rem;
-//   }
-// }
+@mixin font-lena {
+  font-family: 'Lena';
+	color: $text-color-main;
+	background-color: $bg-color-main;
+	font-weight: 400;
+}

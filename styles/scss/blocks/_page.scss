@@ -2,11 +2,12 @@
 @use "../utils/index" as *;
 .page {
 	min-width: #{$min-width}px;
-	color: $text-color-main;
 	font-family: $font-family;
+	color: $text-color-main;
 	background-color: $bg-color-main;
+	font-weight: 400;
 	overflow-x: clip;
-	@include adaptive-property(font-size, 0.875, 1, 1,125, rem);
+	@include adaptive-property(font-size, 0.875, 1, 1.125, rem);
 }
 .page.lock {
 	overflow: hidden;
@@ -27,7 +28,6 @@
 		min-width: 0;
 	}
 }
-
 [class*="__container"] {
 	max-width: 1165px;
 	padding-inline: #{math.div($container-padding, 2)}px;

@@ -18,7 +18,6 @@ HEADER 	padding-inline: 68px
 	header 94px
 
 
-FOOTER	top-padding 132
 	bottom-padding 89
 
 footer__container 1284 + 36 = 1320

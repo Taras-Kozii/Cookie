@@ -1,2 +1,10 @@
 @use "../utils/_index" as *;
 
+.footer {
+  background-color: $text-color-main;
+  color: $bg-color-main;
+  &__content {
+    @include adaptive-property(padding-top, 70, 0, 132);
+    @include adaptive-property(padding-bottom, 40, 0, 89);
+  }
+}

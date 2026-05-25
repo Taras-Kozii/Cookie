@@ -86,13 +86,45 @@ h6 {
   font-size: inherit;
 }
 
+@font-face {
+  font-family: "Lena";
+  src: url("../../fonts/Lena.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kollektif";
+  src: url("../../fonts/Kollektif.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kollektif";
+  src: url("../../fonts/Kollektif-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 .page {
   min-width: 320px;
+  font-family: "Kollektif";
   color: #000;
-  font-family: "";
-  font-size: 1rem;
   background-color: #fff;
+  font-weight: 400;
   overflow-x: clip;
+  font-size: calc(0.875rem + (0.125) * (100vw - 20rem) / (27.99875));
+}
+@media (min-width: 767.98px) {
+  .page {
+    font-size: calc(1rem + (0.125) * (100vw - 47.99875rem) / (43.62625));
+  }
+}
+@media (min-width: 1466px) {
+  .page {
+    font-size: 1.125rem;
+  }
 }
 
 .page.lock {
@@ -124,53 +156,55 @@ h6 {
 }
 
 [class*=__container] {
-  max-width: 1200px;
+  max-width: 1165px;
   padding-inline: 15px;
   margin-inline: auto;
   overflow-x: clip;
 }
 
 .title {
-  font-family: "";
+  font-family: "Kollektif";
   font-weight: 600;
   line-height: 100%;
   color: #000;
   font-size: calc(4.25rem + (-1.25) * (100vw - 20rem) / (27.99875));
-  margin-bottom: calc(24px + (-16) * (100vw - 320px) / (447.98));
 }
 @media (min-width: 767.98px) {
   .title {
-    font-size: calc(3rem + (0) * (100vw - 47.99875rem) / (42.00125));
+    font-size: calc(3rem + (0) * (100vw - 47.99875rem) / (43.62625));
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1466px) {
   .title {
     font-size: 3rem;
   }
 }
+.title {
+  margin-bottom: calc(24px + (-16) * (100vw - 320px) / (447.98));
+}
 @media (min-width: 767.98px) {
   .title {
-    margin-bottom: calc(8px + (-4) * (100vw - 767.98px) / (672.02));
+    margin-bottom: calc(8px + (-4) * (100vw - 767.98px) / (698.02));
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1466px) {
   .title {
     margin-bottom: 4px;
   }
 }
 
 .subtitle {
-  font-family: "";
+  font-family: "Kollektif";
   line-height: 150%;
   color: #000;
   font-size: calc(1.5rem + (1) * (100vw - 20rem) / (27.99875));
 }
 @media (min-width: 767.98px) {
   .subtitle {
-    font-size: calc(2.5rem + (0) * (100vw - 47.99875rem) / (42.00125));
+    font-size: calc(2.5rem + (0) * (100vw - 47.99875rem) / (43.62625));
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1466px) {
   .subtitle {
     font-size: 2.5rem;
   }
@@ -205,36 +239,44 @@ h6 {
   overflow: hidden;
 }
 
-.logo {
+.buttons-lang {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-column-gap: 7px;
+     -moz-column-gap: 7px;
+          column-gap: 7px;
 }
-.logo__img {
-  display: block;
-  aspect-ratio: 1/1;
-  width: 60px;
-  overflow: hidden;
+.buttons-lang__line {
+  background-color: #fff;
+  width: 1px;
 }
-@media (max-width: 1440px) {
-  .logo__img {
-    width: calc(42px + (18) * (100vw - 320px) / (1120));
-  }
+.buttons-lang__lang {
+  font-size: 1.125rem;
+  text-transform: uppercase;
 }
-.logo__img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+.buttons-lang__lang--bold {
+  font-weight: bold;
+}
+
+.privacy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 7px;
+     -moz-column-gap: 7px;
+          column-gap: 7px;
+}
+.privacy__line {
+  background-color: #fff;
+  width: 1px;
+}
+.privacy__link {
+  font-size: 1.125rem;
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
@@ -270,10 +312,10 @@ h6 {
           align-items: center;
 }
 .header__logo {
-  z-index: 5;
   position: relative;
   left: 0;
   top: 0;
+  z-index: 5;
 }
 
 .header.scrolling {
@@ -286,4 +328,25 @@ h6 {
   -webkit-transform: translateY(-30px);
       -ms-transform: translateY(-30px);
           transform: translateY(-30px);
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+.footer__content {
+  padding-top: 132px;
+}
+@media (max-width: 1466px) {
+  .footer__content {
+    padding-top: calc(70px + (62) * (100vw - 320px) / (1146));
+  }
+}
+.footer__content {
+  padding-bottom: 89px;
+}
+@media (max-width: 1466px) {
+  .footer__content {
+    padding-bottom: calc(40px + (49) * (100vw - 320px) / (1146));
+  }
 }
