@@ -155,54 +155,6 @@ h6 {
   min-width: 0;
 }
 
-.title {
-  font-family: "Kollektif";
-  font-weight: 600;
-  line-height: 100%;
-  color: #000;
-  font-size: calc(4.25rem + (-1.25) * (100vw - 20rem) / (27.99875));
-}
-@media (min-width: 767.98px) {
-  .title {
-    font-size: calc(3rem + (0) * (100vw - 47.99875rem) / (43.62625));
-  }
-}
-@media (min-width: 1466px) {
-  .title {
-    font-size: 3rem;
-  }
-}
-.title {
-  margin-bottom: calc(24px + (-16) * (100vw - 320px) / (447.98));
-}
-@media (min-width: 767.98px) {
-  .title {
-    margin-bottom: calc(8px + (-4) * (100vw - 767.98px) / (698.02));
-  }
-}
-@media (min-width: 1466px) {
-  .title {
-    margin-bottom: 4px;
-  }
-}
-
-.subtitle {
-  font-family: "Kollektif";
-  line-height: 150%;
-  color: #000;
-  font-size: calc(1.5rem + (1) * (100vw - 20rem) / (27.99875));
-}
-@media (min-width: 767.98px) {
-  .subtitle {
-    font-size: calc(2.5rem + (0) * (100vw - 47.99875rem) / (43.62625));
-  }
-}
-@media (min-width: 1466px) {
-  .subtitle {
-    font-size: 2.5rem;
-  }
-}
-
 .button {
   width: min(100%, 480px);
   position: relative;
@@ -230,6 +182,72 @@ h6 {
   cursor: pointer;
   z-index: 1;
   overflow: hidden;
+}
+
+.section-header__slogan {
+  font-family: "Lena";
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+@media (max-width: 1466px) {
+  .section-header__slogan {
+    font-size: calc(1rem + (0.25) * (100vw - 20rem) / (71.625));
+  }
+}
+.section-header__slogan {
+  margin-bottom: 42px;
+}
+@media (max-width: 1466px) {
+  .section-header__slogan {
+    margin-bottom: calc(22px + (20) * (100vw - 320px) / (1146));
+  }
+}
+.section-header__title {
+  font-weight: 700;
+  font-size: 3.125rem;
+}
+@media (max-width: 1466px) {
+  .section-header__title {
+    font-size: calc(1.5rem + (1.625) * (100vw - 20rem) / (71.625));
+  }
+}
+
+.section-label {
+  padding: 1.3125rem;
+  background-color: #000;
+  width: 76.73%;
+}
+@media (min-width: 767.98px) {
+  .section-label {
+    width: 50%;
+  }
+}
+.section-label__title {
+  color: #fff;
+}
+.section-label__title span {
+  font-family: "Lena";
+  font-weight: 400;
+}
+.section-label__title span, .section-label__title strong {
+  color: #fff;
+  font-size: 1.875rem;
+}
+@media (max-width: 1466px) {
+  .section-label__title span, .section-label__title strong {
+    font-size: calc(1rem + (0.875) * (100vw - 20rem) / (71.625));
+  }
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 1.875rem;
+}
+@media (max-width: 1466px) {
+  .subtitle {
+    font-size: calc(0.9375rem + (0.9375) * (100vw - 20rem) / (71.625));
+  }
 }
 
 .buttons-lang {
