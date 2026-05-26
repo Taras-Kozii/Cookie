@@ -1,0 +1,14 @@
+@use "../utils/_index.scss" as *;
+
+.section-header {
+  &__slogan {
+    @include font-lena;
+    text-transform: uppercase;
+    @include adaptive-property(font-size, 1, 0, 1.25, rem);
+    @include adaptive-property(margin-bottom, 22, 0, 42);
+  }
+  &__title {
+    font-weight: 700;
+    @include adaptive-property(font-size, 1.5, 0, 3.125, rem);
+  }
+}

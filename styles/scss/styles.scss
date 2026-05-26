@@ -1,9 +1,4 @@
 @use "./utils/index" as *;
 @use "./effects/index" as *;
 
-@use "./blocks/page";
-@use "./blocks/components";
-@use "./blocks/header";
-@use "./blocks/footer";
-@use "./blocks/menu";
-@use './blocks/burger';
+@use "./blocks/index" as *;

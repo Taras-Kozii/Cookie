@@ -1,0 +1,20 @@
+@use "../utils/_index.scss" as *;
+.section-label {
+  padding: 1.3125rem;
+  background-color: $text-color-main;
+  width: 76.73%;
+  @include on-mobile-l {
+    width: 50%;
+  }
+  &__title {
+    color: $bg-color-main;
+    span {
+      @include font-lena;
+    }
+    span,
+    strong {
+      color: $bg-color-main;
+      @include adaptive-property(font-size, 1, 0, 1.875, rem);
+    }
+  }
+}
