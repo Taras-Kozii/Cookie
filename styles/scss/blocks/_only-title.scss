@@ -1,0 +1,12 @@
+@use "../utils/_index" as *;
+
+.only-title {
+  background: $gradient;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include adaptive-property(padding, 32, 0, 79);
+  }
+}

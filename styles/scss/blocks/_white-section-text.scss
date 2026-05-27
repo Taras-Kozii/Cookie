@@ -1,0 +1,20 @@
+@use "../utils/_index.scss" as *;
+
+.white-section-text {
+  &__container {
+    max-width: 1201px;
+    margin-inline: auto;
+    overflow-x: clip;
+    @include adaptive-property(padding-inline, 15, 0, 36);
+    @include adaptive-property(padding-block, 50, 0, 100);
+
+    p {
+      line-height: 166.666667%;
+      text-align: justify;
+      @include adaptive-property(font-size, 0.875, 0, 1.125, rem);
+    }
+    p:not(:last-child) {
+      @include adaptive-property(margin-bottom, 1.25, 0, 3.125, rem);
+    }
+  }
+}

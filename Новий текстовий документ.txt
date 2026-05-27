@@ -6,7 +6,6 @@
 40px	2×	
 50px	7×	H1
 
-white-section__container 1129 + 36 = 1165px
 
 
 

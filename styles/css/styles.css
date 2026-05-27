@@ -756,3 +756,79 @@ h6 {
     font-size: calc(0.9375rem + (0.9375) * (100vw - 20rem) / (71.625));
   }
 }
+
+.white-section-text__container {
+  max-width: 1201px;
+  margin-inline: auto;
+  overflow-x: clip;
+  padding-inline: 36px;
+}
+@media (max-width: 1466px) {
+  .white-section-text__container {
+    padding-inline: calc(15px + (21) * (100vw - 320px) / (1146));
+  }
+}
+.white-section-text__container {
+  padding-block: 100px;
+}
+@media (max-width: 1466px) {
+  .white-section-text__container {
+    padding-block: calc(50px + (50) * (100vw - 320px) / (1146));
+  }
+}
+.white-section-text__container p {
+  line-height: 166.666667%;
+  text-align: justify;
+  font-size: 1.125rem;
+}
+@media (max-width: 1466px) {
+  .white-section-text__container p {
+    font-size: calc(0.875rem + (0.25) * (100vw - 20rem) / (71.625));
+  }
+}
+.white-section-text__container p:not(:last-child) {
+  margin-bottom: 3.125rem;
+}
+@media (max-width: 1466px) {
+  .white-section-text__container p:not(:last-child) {
+    margin-bottom: calc(1.25rem + (1.875) * (100vw - 20rem) / (71.625));
+  }
+}
+
+.only-title {
+  background: -webkit-gradient(linear, left bottom, left top, from(#e093a0), to(#ecddce));
+  background: linear-gradient(0deg, #e093a0 0%, #ecddce 100%);
+}
+.only-title__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 79px;
+}
+@media (max-width: 1466px) {
+  .only-title__container {
+    padding: calc(32px + (47) * (100vw - 320px) / (1146));
+  }
+}
+
+.hero-page__container {
+  max-width: 1280px;
+  margin-inline: auto;
+  overflow-x: clip;
+  padding-inline: 36px;
+}
+@media (max-width: 1466px) {
+  .hero-page__container {
+    padding-inline: calc(15px + (21) * (100vw - 320px) / (1146));
+  }
+}
