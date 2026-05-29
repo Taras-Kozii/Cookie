@@ -1,15 +1,27 @@
 @use "sass:math";
 @use "vars" as *;
 
-@function get-value($min-width, $max-width, $size-at-min-width, $size-at-max-width, $unit) {
-  $return-value: calc(#{$size-at-min-width + $unit} + (#{$size-at-max-width - $size-at-min-width}) * ((100vw - #{$min-width + $unit}) / (#{$max-width - $min-width})));
+@function get-value(
+  $min-width,
+  $max-width,
+  $size-at-min-width,
+  $size-at-max-width,
+  $unit
+) {
+  $return-value: calc(
+    #{$size-at-min-width + $unit} +
+      (#{$size-at-max-width - $size-at-min-width}) *
+      ((100vw - #{$min-width + $unit}) / (#{$max-width - $min-width}))
+  );
   @return $return-value;
 }
-@mixin adaptive-property($property,
+@mixin adaptive-property(
+  $property,
   $mobile-size,
   $tablet-size,
   $desktop-size,
-  $unit: px) {
+  $unit: px
+) {
   $max-width: 1466;
   $min-width: 320;
   $tablet-width: 767.98;
@@ -24,27 +36,31 @@
     #{$property}: $desktop-size + $unit;
 
     @media (max-width: 1466px) {
-      #{$property}: get-value($min-width,
-          $max-width,
-          $mobile-size,
-          $desktop-size,
-          $unit );
-    }
-  }
-
-  @else {
-    #{$property}: get-value($min-width,
-        $tablet-width,
+      #{$property}: get-value(
+        $min-width,
+        $max-width,
         $mobile-size,
-        $tablet-size,
-        $unit );
+        $desktop-size,
+        $unit
+      );
+    }
+  } @else {
+    #{$property}: get-value(
+      $min-width,
+      $tablet-width,
+      $mobile-size,
+      $tablet-size,
+      $unit
+    );
 
     @media (min-width: 767.98px) {
-      #{$property}: get-value($tablet-width,
-          $max-width,
-          $tablet-size,
-          $desktop-size,
-          $unit );
+      #{$property}: get-value(
+        $tablet-width,
+        $max-width,
+        $tablet-size,
+        $desktop-size,
+        $unit
+      );
     }
 
     @media (min-width: 1466px) {
@@ -54,7 +70,7 @@
 }
 
 @mixin on-desktop {
-  @media (min-width: 1440px) {
+  @media (min-width: #{$pc}px) {
     @content;
   }
 }
@@ -109,7 +125,6 @@
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 @mixin hover() {
   @media (hover: hover) and (pointer: fine) {
-
     &:hover,
     &:focus-within {
       @content;
@@ -117,7 +132,6 @@
   }
 
   @media (hover: none) and (pointer: coarse) {
-
     &:active,
     &:focus,
     &:focus-within {
@@ -127,7 +141,6 @@
 }
 @mixin hover-pseudo($pseudo) {
   @media (hover: hover) and (pointer: fine) {
-
     &:hover#{$pseudo},
     &:focus-within#{$pseudo} {
       @content;
@@ -135,7 +148,6 @@
   }
 
   @media (hover: none) and (pointer: coarse) {
-
     &:active#{$pseudo},
     &:focus#{$pseudo},
     &:focus-within#{$pseudo} {
@@ -154,6 +166,6 @@
   }
 }
 @mixin font-lena {
-  font-family: 'Lena';
+  font-family: "Lena";
   font-weight: 400;
 }

@@ -12,12 +12,9 @@ $transition-duraction: 0.3s;
 
 $min-width: 320;
 $max-width: 1466;
-$max-width-container: 1170;
-$container-padding: 30;
-$container-width: $max-width-container + $container-padding;
+$container: 1320;
 
-// Брейк-поїнти
-$pc: $container-width; // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$pc: 1440;
 $tablet: 991.98; // Планшети, деякі телефони в горизонтальному положенні
 $mobile-l: 767.98; // Телефони L
 $mobile-s: 479.98; // Телефони S

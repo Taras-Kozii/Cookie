@@ -2,7 +2,7 @@
 
 .white-section-text {
   &__container {
-    max-width: 1201px;
+    max-width: 1200px;
     margin-inline: auto;
     overflow-x: clip;
     @include adaptive-property(padding-inline, 15, 0, 36);

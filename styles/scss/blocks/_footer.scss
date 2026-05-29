@@ -4,7 +4,7 @@
   background-color: $text-color-main;
   color: $bg-color-main;
   &__container {
-    max-width: 1320px;
+    max-width: #{$container}px;
     margin-inline: auto;
     overflow-x: clip;
     @include adaptive-property(padding-inline, 15, 0, 36);

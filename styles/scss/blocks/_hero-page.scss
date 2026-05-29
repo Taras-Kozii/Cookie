@@ -1,10 +1,29 @@
 @use "../utils/_index" as *;
 
 .hero-page {
+  &__top {
+    background: $gradient;
+    padding-top: 20px;
+    @include adaptive-property(margin-bottom, 25, 0, 113);
+  }
   &__container {
-    max-width: 1280px;
+    max-width: #{$container}px;
     margin-inline: auto;
     overflow-x: clip;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     @include adaptive-property(padding-inline, 15, 0, 36);
+    @include adaptive-property(column-gap, 20, 0, 110);
+    @include on-mobile-l {
+      flex-wrap: nowrap;
+    }
+  }
+  &__img {
+    aspect-ratio: 750 / 500;
+    translate: 0 20%;
+    @include adaptive-property(width, 280, 0, 750);
+    @include ibg;
   }
 }
