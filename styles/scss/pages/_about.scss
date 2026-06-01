@@ -1,0 +1,50 @@
+@use "../utils/_index.scss" as *;
+
+.values {
+  position: relative;
+  background: $gradient;
+  @include adaptive-property(padding-block, 64, 0, 132);
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: right;
+  }
+  &__container {
+    max-width: 1315px;
+    margin-inline: auto;
+    // overflow-x: clip;
+    @include adaptive-property(padding-inline, 15, 0, 36);
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 513px));
+    @include adaptive-property(row-gap, 30, 0, 60);
+    justify-content: space-between;
+  }
+}
+.card-values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ECDDCE;
+  @include adaptive-property(padding-inline, 20, 0, 52);
+  @include adaptive-property(padding-block, 26, 0, 56);
+  &__img  {
+    aspect-ratio: 1 / 1;
+    @include ibg(contain);
+    @include adaptive-property(margin-bottom, 14, 0, 28);
+  }
+  &__title {
+    @include adaptive-property(margin-bottom, 20, 0, 40);
+  }
+  &__text {
+    p {
+      text-align: justify;
+      line-height: 166.666667%; /* 30px/18 */
+    }
+    p:not(:last-child) {
+      margin-bottom: 0.625rem;
+    }
+  }
+}

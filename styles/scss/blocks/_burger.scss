@@ -1,6 +1,6 @@
 $menu-size: 40px;
 $line-height: 3px;
-$gap: $line-height * 5;
+$gap: calc($line-height * 5);
 $bg-color: #000;
 $radius: 0;
 
@@ -18,17 +18,17 @@ $radius: 0;
 .burger {
   span {
     @extend %menu-dash;
-    margin-top: $line-height / -2;
+    margin-top: calc($line-height / -2);
   }
   &:before {
     content: "";
     @extend %menu-dash;
-    margin-top: -$gap + ($line-height / -2);
+    margin-top: -$gap + calc($line-height / -2);
   }
   &:after {
     content: "";
     @extend %menu-dash;
-    margin-top: $gap + ($line-height / -2);
+    margin-top: $gap + calc($line-height / -2);
   }
   @media (max-width: 1024px) {
     width: $menu-size;

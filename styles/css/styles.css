@@ -107,6 +107,53 @@ h6 {
   font-style: normal;
   font-display: swap;
 }
+.button-border-flip {
+  position: relative;
+  color: green;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: background-color, 0.3s, 0.5s;
+  transition: background-color, 0.3s, 0.5s;
+}
+.button-border-flip::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  -webkit-transform: perspective(300px) rotateX(0deg);
+          transform: perspective(300px) rotateX(0deg);
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .button-border-flip:hover, .button-border-flip:focus-within {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .button-border-flip:active, .button-border-flip:focus, .button-border-flip:focus-within {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .button-border-flip:hover::before, .button-border-flip:focus-within::before {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border: 4px solid currentColor;
+    -webkit-transform: perspective(350px) rotateX(-180deg);
+            transform: perspective(350px) rotateX(-180deg);
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .button-border-flip:active::before, .button-border-flip:focus::before, .button-border-flip:focus-within::before {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border: 4px solid currentColor;
+    -webkit-transform: perspective(350px) rotateX(-180deg);
+            transform: perspective(350px) rotateX(-180deg);
+  }
+}
+
 .burger:after, .burger:before, .burger span {
   display: block;
   position: absolute;
@@ -392,6 +439,7 @@ h6 {
   z-index: 50;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  background-color: #fff;
 }
 .header__container {
   max-width: 1366px;
@@ -439,15 +487,8 @@ h6 {
 }
 
 .header.scrolling {
-  background: rgba(79, 79, 84, 0.2);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(18px);
-}
-
-.header.hidden {
-  opacity: 0;
-  -webkit-transform: translateY(-30px);
-      -ms-transform: translateY(-30px);
-          transform: translateY(-30px);
 }
 
 .logo {
@@ -806,6 +847,50 @@ h6 {
     margin-bottom: calc(1.25rem + (1.875) * (100vw - 20rem) / (71.625));
   }
 }
+.white-section-text__title {
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 1466px) {
+  .white-section-text__title {
+    margin-bottom: calc(0.625rem + (0.625) * (100vw - 20rem) / (71.625));
+  }
+}
+.white-section-text__text {
+  margin-bottom: 1.875rem;
+}
+@media (max-width: 1466px) {
+  .white-section-text__text {
+    margin-bottom: calc(1.25rem + (0.625) * (100vw - 20rem) / (71.625));
+  }
+}
+.white-section-text__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.75rem;
+}
+.white-section-text__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.white-section-text__item::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  margin-right: 0.75rem;
+  border-radius: 50%;
+  background-color: currentColor;
+}
 
 .only-title {
   background: -webkit-gradient(linear, left bottom, left top, from(#e093a0), to(#ecddce));
@@ -904,4 +989,119 @@ h6 {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.catering__text {
+  margin-bottom: 50px;
+}
+@media (max-width: 1466px) {
+  .catering__text {
+    margin-bottom: calc(20px + (30) * (100vw - 320px) / (1146));
+  }
+}
+
+.values {
+  position: relative;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e093a0), to(#ecddce));
+  background: linear-gradient(0deg, #e093a0 0%, #ecddce 100%);
+  padding-block: 132px;
+}
+@media (max-width: 1466px) {
+  .values {
+    padding-block: calc(64px + (68) * (100vw - 320px) / (1146));
+  }
+}
+.values__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: right;
+}
+.values__container {
+  max-width: 1315px;
+  margin-inline: auto;
+  padding-inline: 36px;
+}
+@media (max-width: 1466px) {
+  .values__container {
+    padding-inline: calc(15px + (21) * (100vw - 320px) / (1146));
+  }
+}
+.values__content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 513px));
+  row-gap: 60px;
+}
+@media (max-width: 1466px) {
+  .values__content {
+    row-gap: calc(30px + (30) * (100vw - 320px) / (1146));
+  }
+}
+.values__content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ECDDCE;
+  padding-inline: 52px;
+}
+@media (max-width: 1466px) {
+  .card-values {
+    padding-inline: calc(20px + (32) * (100vw - 320px) / (1146));
+  }
+}
+.card-values {
+  padding-block: 56px;
+}
+@media (max-width: 1466px) {
+  .card-values {
+    padding-block: calc(26px + (30) * (100vw - 320px) / (1146));
+  }
+}
+.card-values__img {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+.card-values__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.card-values__img {
+  margin-bottom: 28px;
+}
+@media (max-width: 1466px) {
+  .card-values__img {
+    margin-bottom: calc(14px + (14) * (100vw - 320px) / (1146));
+  }
+}
+.card-values__title {
+  margin-bottom: 40px;
+}
+@media (max-width: 1466px) {
+  .card-values__title {
+    margin-bottom: calc(20px + (20) * (100vw - 320px) / (1146));
+  }
+}
+.card-values__text p {
+  text-align: justify;
+  line-height: 166.666667%; /* 30px/18 */
+}
+.card-values__text p:not(:last-child) {
+  margin-bottom: 0.625rem;
 }

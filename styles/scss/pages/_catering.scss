@@ -1,0 +1,7 @@
+@use "../utils/_index.scss" as *;
+
+.catering {
+  &__text {
+    @include adaptive-property(margin-bottom, 20, 0, 50);
+  }
+}

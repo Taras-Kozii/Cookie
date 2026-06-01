@@ -17,4 +17,29 @@
       @include adaptive-property(margin-bottom, 1.25, 0, 3.125, rem);
     }
   }
+    &__title {
+    font-weight: 700;
+    @include adaptive-property(margin-bottom, 0.625, 0, 1.25, rem);
+  }
+  &__text {
+    @include adaptive-property(margin-bottom, 1.25, 0, 1.875, rem);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.75rem;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      margin-right: 0.75rem;
+      border-radius: 50%;
+      background-color: currentColor;
+    }
+  }
 }
