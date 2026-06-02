@@ -1,0 +1,40 @@
+@use "../utils/_index" as *;
+
+.order {
+  background: #ecddce;
+  &__container {
+    max-width: 715px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: clip;
+    @include adaptive-property(padding-inline, 15, 0, 36);
+    @include adaptive-property(padding-top, 30, 0, 74);
+    @include adaptive-property(padding-bottom, 50, 0, 100);
+  }
+  &__title {
+    strong {
+      font-weight: 700;
+    }
+    span {
+      @include font-lena;
+    }
+    @include adaptive-property(font-size, 1.25, 0, 2.5, rem);
+    @include adaptive-property(margin-bottom, 20, 0, 50);
+  }
+  &__subtitle {
+    width: fit-content;
+    text-align: center;
+    margin-inline: auto;
+  }
+  &__text {
+    p {
+      text-align: center;
+    }
+    p:not(:last-child) {
+      margin-bottom: 0.625rem;
+    }
+    @include adaptive-property(margin-bottom, 36, 0, 89);
+  }
+}
