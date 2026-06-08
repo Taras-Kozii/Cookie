@@ -8,29 +8,33 @@
     position: absolute;
     top: 0;
     left: 0;
-    text-align: right;
   }
   &__container {
     max-width: 1315px;
     margin-inline: auto;
-    // overflow-x: clip;
+    overflow-x: clip;
     @include adaptive-property(padding-inline, 15, 0, 36);
   }
   &__content {
     display: grid;
-    grid-template-columns: repeat(2, minmax(280px, 513px));
+    grid-template-columns: repeat(1, minmax(280px, 513px));
+    justify-content: space-evenly;
+    column-gap: 1rem;
     @include adaptive-property(row-gap, 30, 0, 60);
-    justify-content: space-between;
+    @include on-mobile-l {
+      grid-template-columns: repeat(2, minmax(280px, 513px));
+      justify-content: space-between;
+    }
   }
 }
 .card-values {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ECDDCE;
+  background-color: #ecddce;
   @include adaptive-property(padding-inline, 20, 0, 52);
   @include adaptive-property(padding-block, 26, 0, 56);
-  &__img  {
+  &__img {
     aspect-ratio: 1 / 1;
     @include ibg(contain);
     @include adaptive-property(margin-bottom, 14, 0, 28);

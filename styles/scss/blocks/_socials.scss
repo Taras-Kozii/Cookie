@@ -15,4 +15,18 @@
     column-gap: 14px;
     align-items: center;
   }
+  &__link {
+    svg path,
+    svg g {
+      transition: $transition-duraction ease-in;
+    }
+    svg {
+      @include hover-pseudo(" g") {
+        fill: #dc754f;
+      }
+      @include hover-pseudo(" path") {
+        fill: #dc754f;
+      }
+    }
+  }
 }

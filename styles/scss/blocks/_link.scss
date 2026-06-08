@@ -1,1 +1,23 @@
 @use "../utils/_index.scss" as *;
+
+.link {
+  span {
+    position: relative;
+
+    @include hover-pseudo('::before') {
+      transform: scaleX(1) translateY(0px);
+    }
+  }
+  span::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: inherit;
+    background-color: currentColor;
+    transform: scaleX(0) translateY(5px);
+    transition: transform $transition-duraction ease-in-out;
+  }
+}

@@ -1,0 +1,19 @@
+@use "../utils/_index.scss" as *;
+
+.home {
+  &__container {
+    max-width: 1315px;
+    margin-inline: auto;
+    overflow-x: clip;
+    @include adaptive-property(padding-inline, 15, 0, 36);
+  }
+}
+.locations-top {
+  background: $gradient;
+  @include adaptive-property(padding-top, 60, 0, 127);
+  @include adaptive-property(padding-bottom, 40, 0, 91);
+}
+.locations-bottom {
+  @include adaptive-property(padding-top, 40, 0, 91);
+  @include adaptive-property(padding-bottom, 60, 0, 131);
+}

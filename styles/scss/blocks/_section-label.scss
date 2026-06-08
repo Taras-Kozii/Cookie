@@ -2,11 +2,14 @@
 .section-label {
   padding: 1.3125rem;
   background-color: $text-color-main;
-  width: 76.73%;
+  width: 76.73vw;
+  translate: 0 -50%;
   @include on-mobile-l {
-    width: 50%;
+    width: 50vw;
   }
   &__title {
+    max-width: calc(1300px / 2);
+    margin-left: auto;
     color: $bg-color-main;
     span {
       @include font-lena;
@@ -16,5 +19,6 @@
       color: $bg-color-main;
       @include adaptive-property(font-size, 1, 0, 1.875, rem);
     }
+    @include adaptive-property(padding-left, 22, 0, 44);
   }
 }
