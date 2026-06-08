@@ -1329,6 +1329,69 @@ h6 {
     padding-inline: calc(15px + (21) * (100vw - 320px) / (1146));
   }
 }
+.home__locations {
+  position: relative;
+}
+
+.hero {
+  background: -webkit-gradient(linear, left bottom, left top, from(#e093a0), to(#ecddce));
+  background: linear-gradient(0deg, #e093a0 0%, #ecddce 100%);
+}
+.hero__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero__img {
+  aspect-ratio: 1/1;
+  max-width: 47.78vw;
+  overflow: hidden;
+}
+.hero__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.hero__text-content {
+  max-width: 392px;
+  justify-self: flex-end;
+  margin-right: auto;
+}
+.hero__header {
+  margin-bottom: 3.25rem;
+}
+@media (max-width: 1466px) {
+  .hero__header {
+    margin-bottom: calc(1.375rrem + (1.875r) * (100vw - 20rem) / (71.625));
+  }
+}
+.hero__title {
+  font-size: 3.125rem;
+}
+@media (max-width: 1466px) {
+  .hero__title {
+    font-size: calc(1.375rrem + (1.75r) * (100vw - 20rem) / (71.625));
+  }
+}
+.hero__button span {
+  font-family: "Lena";
+  font-weight: 400;
+}
+
+.locations__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .locations-top {
   background: -webkit-gradient(linear, left bottom, left top, from(#e093a0), to(#ecddce));

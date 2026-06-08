@@ -7,6 +7,45 @@
     overflow-x: clip;
     @include adaptive-property(padding-inline, 15, 0, 36);
   }
+  &__locations {
+    position: relative;
+  }
+}
+.hero {
+  background: $gradient;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__img {
+    aspect-ratio: 1 / 1;
+    max-width: 47.78vw;
+    @include ibg(cover);
+  }
+  &__text-content {
+    max-width: 392px;
+    justify-self: flex-end;
+    margin-right: auto;
+  }
+  &__header {
+    @include adaptive-property(margin-bottom, 1.375r, 0, 3.25, rem);
+  }
+  &__title {
+    @include adaptive-property(font-size, 1.375r, 0, 3.125, rem);
+  }
+  &__button {
+    span {
+      @include font-lena;
+    }
+  }
+}
+.locations {
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 .locations-top {
   background: $gradient;
