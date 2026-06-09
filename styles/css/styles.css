@@ -698,6 +698,10 @@ h6 {
   left: 0;
 }
 
+.menu__link.active {
+  color: #dc754f;
+}
+
 .page {
   min-width: 320px;
   font-family: "Kollektif";

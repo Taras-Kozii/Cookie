@@ -51,28 +51,32 @@
               <nav class="menu__body">
                 <ul class="menu__list">
                   <li class="menu__item">
-                    <a href="#" class="menu__link"><span>Cookies</span></a>
+                    <a href="/index.html#cookies" class="menu__link link"
+                      ><span>Cookies</span></a
+                    >
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link"><span>Locations</span></a>
+                    <a href="/index.html#locations" class="menu__link link"
+                      ><span>Locations</span></a
+                    >
                   </li>
                   <li class="menu__item">
-                    <a href="./about.html" class="menu__link"
+                    <a href="/about.html" class="menu__link link"
                       ><span>About</span></a
                     >
                   </li>
                   <li class="menu__item">
-                    <a href="./jobs.html" class="menu__link"
+                    <a href="/jobs.html" class="menu__link link"
                       ><span>Jobs</span></a
                     >
                   </li>
                   <li class="menu__item">
-                    <a href="./catering.html" class="menu__link"
+                    <a href="/catering.html" class="menu__link link"
                       ><span>Catering</span></a
                     >
                   </li>
                   <li class="menu__item">
-                    <a href="./franchising.html" class="menu__link"
+                    <a href="/franchising.html" class="menu__link link"
                       ><span>Franchise</span></a
                     >
                   </li>
@@ -84,7 +88,124 @@
         </div>
       </header>
 
-      <main class="main"></main>
+      <main class="main">
+        <section class="form-section">
+          <form action="#" class="contact-form" method="post">
+            <fieldset class="contact-form__group">
+              <legend class="contact-form__legend">Topic</legend>
+              <div class="checkbox-group">
+                <div class="contact-form__checkbox">
+                  <input type="checkbox" id="jobs" name="topic" value="Jobs" />
+                  <label for="jobs">Jobs</label>
+                </div>
+
+                <div class="contact-form__checkbox">
+                  <input
+                    type="checkbox"
+                    id="franchise"
+                    name="topic"
+                    value="Franchise"
+                  />
+                  <label for="franchise">Franchise</label>
+                </div>
+
+                <div class="contact-form__checkbox">
+                  <input
+                    type="checkbox"
+                    id="catering"
+                    name="topic"
+                    value="Catering"
+                  />
+                  <label for="catering">Catering</label>
+                </div>
+
+                <div class="contact-form__checkbox">
+                  <input
+                    type="checkbox"
+                    id="media"
+                    name="topic"
+                    value="Media & Press"
+                  />
+                  <label for="media">Media & Press</label>
+                </div>
+
+                <div class="contact-form__checkbox">
+                  <input
+                    type="checkbox"
+                    id="other"
+                    name="topic"
+                    value="Others"
+                  />
+                  <label for="other">Others</label>
+                </div>
+              </div>
+            </fieldset>
+            <div class="contact-form__item">
+              <label class="required" for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="contact-form__item">
+              <label class="required" for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="contact-form__item">
+              <label class="required" for="phone">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your phone number"
+                required
+                autocomplete="tel"
+              />
+            </div>
+
+            <div class="contact-form__item">
+              <label class="required" for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your message"
+                required
+              ></textarea>
+            </div>
+            <div class="contact-form__item privacy">
+              <input type="checkbox" id="privacy" name="privacy" required />
+
+              <label for="privacy">
+                By providing my data, I agree that cookie couture may contact me
+                and I agree to the terms and conditions and privacy policy.
+                <a href="/privacy-policy" target="_blank" rel="noopener">
+                  Privacy Policy
+                </a>
+              </label>
+            </div>
+
+            <!-- Google reCAPTCHA -->
+            <div class="captcha">
+              <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+        </section>
+      </main>
 
       <footer class="footer">
         <div class="footer__container">
@@ -103,41 +224,61 @@
               <nav class="footer-menu">
                 <ul class="footer-menu__list">
                   <li class="footer-menu__item">
-                    <a href="#" class="footer-menu__link">Contact</a>
+                    <a href="contact.html" class="footer-menu__link link"
+                      ><span>Contact</span></a
+                    >
                   </li>
                   <li class="footer-menu__item">
-                    <a href="#" class="footer-menu__link">Press</a>
+                    <a href="#" class="footer-menu__link link"
+                      ><span>Press</span></a
+                    >
                   </li>
                   <li class="footer-menu__item">
-                    <a href="#" class="footer-menu__link">Jobs</a>
+                    <a href="jobs.html" class="footer-menu__link link"
+                      ><span>Jobs</span></a
+                    >
                   </li>
                   <li class="footer-menu__item">
-                    <a href="#" class="footer-menu__link">Franchise</a>
+                    <a href="franchising.html" class="footer-menu__link link"
+                      ><span>Franchise</span></a
+                    >
                   </li>
                 </ul>
                 <ul class="footer-menu__list">
                   <li class="footer-menu__item">
-                    <a href="#" class="footer-menu__link">About Us</a>
+                    <a href="about.html" class="footer-menu__link link"
+                      ><span>About Us</span></a
+                    >
                   </li>
                   <li class="footer-menu__item">
-                    <a href="#" class="footer-menu__link">Cookie Menu</a>
+                    <a href="index.html#cookies" class="footer-menu__link link"
+                      ><span>Cookie Menu</span></a
+                    >
                   </li>
                   <li class="footer-menu__item">
-                    <a href="#" class="footer-menu__link">Locations</a>
+                    <a
+                      href="index.html#locations"
+                      class="footer-menu__link link"
+                      ><span>Locations</span></a
+                    >
                   </li>
                   <li class="footer-menu__item">
-                    <a href="#" class="footer-menu__link">Catering</a>
+                    <a href="catering.html" class="footer-menu__link link"
+                      ><span>Catering</span></a
+                    >
                   </li>
                 </ul>
               </nav>
               <div class="footer__lang buttons-lang">
-                <button class="button__lang" type="button">DE</button>
+                <button class="button__lang link" type="button">
+                  <span>DE</span>
+                </button>
                 <div class="buttons-lang__line"></div>
                 <button
-                  class="button__lang buttons-lang__lang--bold"
+                  class="button__lang buttons-lang__lang--bold link"
                   type="button"
                 >
-                  ENG
+                  <span>ENG</span>
                 </button>
               </div>
             </div>
@@ -219,9 +360,13 @@
                 </ul>
               </div>
               <div class="privacy">
-                <a href="#" class="privacy__link">Impressum</a>
+                <a href="imprint.html" class="privacy__link link"
+                  ><span>Imprint</span></a
+                >
                 <div class="privacy__line"></div>
-                <a href="#" class="privacy__link">Datenschutz</a>
+                <a href="privacy.html" class="privacy__link link"
+                  ><span>Privacy Policy</span></a
+                >
               </div>
             </div>
           </div>
@@ -229,5 +374,6 @@
       </footer>
     </div>
     <script type="module" src="./scripts/main.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </body>
 </html>

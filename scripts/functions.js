@@ -32,6 +32,18 @@ export function lockPage() {
   }
 }
 }
+
+export function activeLink() {
+    const currentUrl = window.location.pathname;
+
+    document.querySelectorAll('.menu__link').forEach(link => {
+        const linkUrl = new URL(link.href).pathname;
+
+        if (linkUrl === currentUrl) {
+            link.classList.add('active');
+        }
+    });
+}
 // export function setCSSProperty(item, property, value) {
 //   item.style.setProperty(property, value);
 // }

@@ -2,11 +2,13 @@
 
 import { initNavigation } from './menu.js';
 import { initHeader } from './header.js';
+import { activeLink } from './functions.js';
 // import { VanillaTilt } from './effects/tilt/vanilla-tilt.js';
 // import SimpleParallax from './effects/simpleParallax/index.js';
 // import { watcherAnim, watcherToggle, countAnimate } from './animation.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  activeLink();
   initNavigation();
   initHeader();
   // new SimpleParallax(document.querySelectorAll('.parallax-img'), {

@@ -4,7 +4,7 @@ import { burger } from './vars.js';
 import { lockPage, scrollToBlock } from './functions.js';
 
 const menu = document.querySelector('.menu__body');
-const navLinks = document.querySelectorAll('[data-goto]');
+const navLinks = document.querySelectorAll('.menu__link');
 
 burger.addEventListener('click', e => {
   lockPage();
@@ -16,9 +16,6 @@ export function initNavigation() {
   if (navLinks.length) {
     navLinks.forEach(link => {
       link.addEventListener('click', e => {
-        e.preventDefault();
-        scrollToBlock(link);
-
         if (burger.classList.contains('active')) {
           lockPage();
           burger.classList.remove('active');
