@@ -53,6 +53,45 @@
   @include adaptive-property(padding-bottom, 40, 0, 91);
 }
 .locations-bottom {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__column {
+    width: 50vw;
+  }
+  &__container {
+    max-width: 708px;
+    margin-inline: auto;
+    overflow-x: clip;
+    @include adaptive-property(padding-inline, 15, 0, 36);
+  }
+  &__column:nth-child(1) {
+    background-color: #f4d8dd;
+  }
+  &__column:nth-child(2) {
+    background-color: #ecddce;
+  }
+}
+.locations-bottom-item {
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   @include adaptive-property(padding-top, 40, 0, 91);
   @include adaptive-property(padding-bottom, 60, 0, 131);
+  &__title {
+    text-align: center;
+    margin-inline: auto;
+    span {
+      @include font-lena;
+    }
+    @include adaptive-property(font-size, 1.25, 0, 2.5, rem);
+  }
+  &__button {
+    span {
+      @include font-lena;
+    }
+  }
 }
