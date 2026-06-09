@@ -51,36 +51,57 @@
   background: $gradient;
   @include adaptive-property(padding-top, 60, 0, 127);
   @include adaptive-property(padding-bottom, 40, 0, 91);
-}
-.locations-bottom {
-  &__content {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__column {
-    width: 50vw;
-  }
   &__container {
-    max-width: 708px;
+    max-width: 1315px;
     margin-inline: auto;
     overflow-x: clip;
     @include adaptive-property(padding-inline, 15, 0, 36);
   }
-  &__column:nth-child(1) {
-    background-color: #f4d8dd;
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(280px, 513px));
+    justify-content: space-evenly;
+    column-gap: 1rem;
+    @include adaptive-property(row-gap, 30, 0, 60);
+    @include on-mobile-l {
+      grid-template-columns: repeat(2, minmax(280px, 513px));
+      justify-content: space-between;
+    }
   }
-  &__column:nth-child(2) {
+}
+.locations-bottom {
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    @include on-mobile-l {
+      flex-wrap: nowrap;
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    @include on-mobile-l {
+      width: 50vw;
+    }
+    @include adaptive-property(padding-bottom, 60, 0, 127);
+    @include adaptive-property(padding-top, 40, 0, 91);
+  }
+  &__item:nth-child(1) {
     background-color: #ecddce;
+  }
+  &__item:nth-child(2) {
+    background-color: #f4d8dd;
   }
 }
 .locations-bottom-item {
-  max-width: 340px;
+  max-width: 410px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  @include adaptive-property(padding-top, 40, 0, 91);
-  @include adaptive-property(padding-bottom, 60, 0, 131);
+  @include adaptive-property(padding-inline, 15, 0, 36);
   &__title {
     text-align: center;
     margin-inline: auto;
@@ -88,10 +109,65 @@
       @include font-lena;
     }
     @include adaptive-property(font-size, 1.25, 0, 2.5, rem);
+    @include adaptive-property(margin-bottom, 30, 0, 70);
+  }
+  &__text {
+    flex: 1 1 auto;
+    p {
+      line-height: 166.666667%; /* 30px/18 */
+      text-align: center;
+    }
+    P:not(:last-child) {
+      margin-bottom: 0.625rem;
+    }
+    @include adaptive-property(margin-bottom, 40, 0, 115);
   }
   &__button {
     span {
       @include font-lena;
     }
+  }
+}
+.locations-place {
+  max-width: 513px;
+  position: relative;
+  &__body {
+    background-color: #ecddce;
+    @include adaptive-property(padding-inline, 20, 0, 40);
+    @include adaptive-property(padding-block, 14, 0, 36);
+  }
+  &__img {
+    aspect-ratio: 513 /288;
+    @include ibg(cover);
+  }
+  &__img.soon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background-color: rgba(217, 217, 217, 0.4);
+      z-index: 2;
+    }
+    &::after {
+      content: "Coming Soon";
+      position: absolute;
+      @include adaptive-property(font-size, 20, 0, 40);
+      font-weight: 700;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    @include adaptive-property(font-size, 0.875 0, 1.875, rem);
+    @include adaptive-property(margin-bottom, 0.75, 0, 1.6875, rem);
+  }
+  &__link {
+    @include adaptive-property(margin-bottom, 0.5, 0, 1, rem);
   }
 }
