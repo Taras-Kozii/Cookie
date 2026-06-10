@@ -1,0 +1,117 @@
+@use "../utils/_index.scss" as *;
+
+.contact {
+  @include adaptive-property(margin-bottom, 0.9375, 0, 1.875, rem);
+  &__title {
+    span {
+      font-weight: 400;
+    }
+  }
+}
+.form-section {
+  @include adaptive-property(padding-top, 24, 0, 48);
+  @include adaptive-property(padding-bottom, 34, 0, 72);
+}
+.contact-form {
+  max-width: 798px;
+  margin-inline: auto;
+  @include adaptive-property(padding-inline, 15, 0, 36);
+  &__group {
+    @include adaptive-property(margin-bottom, 1, 0, 2, rem);
+  }
+  &__legend {
+    font-weight: 700;
+    line-height: 166.666667%; /* 30px/18 */
+    margin-bottom: 0.6875rem;
+  }
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 0.6875rem;
+  }
+  &__checkbox {
+    label {
+      width: fit-content;
+    }
+    input[type="checkbox"] {
+      width: 20px;
+      aspect-ratio: 1 / 1;
+    }
+    display: flex;
+    align-items: center;
+    column-gap: 0.3125rem;
+  }
+  &__item {
+    @include adaptive-property(margin-bottom, 0.5, 0, 1, rem);
+    label {
+      font-weight: 700;
+      line-height: 166.666667%; /* 30px/18 */
+      margin-bottom: 0.6875rem;
+      margin-left: 10px;
+      @include adaptive-property(margin-bottom, 0.5, 0, 1, rem);
+    }
+    input {
+      padding-block: 0.8125rem;
+      padding-inline: 2.125rem;
+      border: 1px solid $text-color-main;
+    }
+    textarea {
+      aspect-ratio: 798 / 462;
+      padding-block: 1.625rem;
+      padding-inline: 2.125rem;
+      border: 1px solid #333;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: #606060;
+    }
+  }
+  .privacy {
+    label {
+      font-weight: 400;
+    }
+    input {
+      width: 20px;
+      aspect-ratio: 1 / 1;
+    }
+  }
+  .captcha {
+    @include adaptive-property(margin-bottom, 1, 0, 2, rem);
+  }
+  button[type="submit"] {
+    position: relative;
+    min-width: 232px;
+    padding-block: 0.75rem;
+    padding-inline: 0.375rem;
+    background-color: #f4d8dd;
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -100%;
+      z-index: -1;
+      width: 52%;
+      height: 110%;
+      background-color: #dc754f;
+      clip-path: polygon(
+        0% 1.5%,
+        85% 0%,
+        100.1% 0%,
+        100.1% 100.3%,
+        85% 100%,
+        28.6% 99.8%,
+        25.4% 90.8%,
+        4.1% 18%
+      );
+      transition: $transition-duraction ease-out;
+    }
+    @include hover-pseudo("::after") {
+      right: 0;
+    }
+  }
+}
