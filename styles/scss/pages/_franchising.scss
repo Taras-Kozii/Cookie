@@ -1,0 +1,71 @@
+@use "../utils/_index.scss" as *;
+
+.how {
+  background: $gradient;
+  position: relative;
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__container {
+    max-width: 1244px;
+    margin-inline: auto;
+    padding-left: 36px;
+    @include adaptive-property(padding-right, 15, 0, 36);
+    @include adaptive-property(padding-top, 50, 0, 148);
+    @include adaptive-property(padding-bottom, 70, 0, 189);
+  }
+  &__list {
+    max-width: 1160px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    counter-reset: step;
+    list-style-position: inside;
+    list-style-type: none;
+    border-left: 4px solid $text-color-main;
+    @include adaptive-property(row-gap, 36, 0, 85);
+  }
+  &__item {
+    position: relative;
+    background: #ecddce;
+    counter-increment: step;
+    @include adaptive-property(padding-top, 22, 0, 37);
+    @include adaptive-property(padding-bottom, 32, 0, 68);
+    @include adaptive-property(padding-left, 60, 0, 176);
+    @include adaptive-property(padding-right, 36, 0, 86);
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      translate: -50% -50%;
+      content: "step " counter(step);
+      display: block;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: $text-color-main;
+      @include adaptive-property(font-size, 0.9375, 0, 1.875, rem);
+      @include adaptive-property(padding-inline, 16, 0, 35);
+      @include adaptive-property(padding-block, 12, 0, 27);
+    }
+  }
+  &__item:last-child {
+    margin-left: -4px;
+    z-index: 2;
+  }
+  &__item-title {
+    font-weight: 700;
+    margin-bottom: 0.8125rem;
+    @include adaptive-property(font-size, 0.9375, 0, 1.875, rem);
+  }
+  &__item-text {
+    p {
+      line-height: 166.666667%; /* 30px/18 */
+    }
+    P:not(:last-child) {
+      margin-bottom: 0.625rem;
+    }
+  }
+}
