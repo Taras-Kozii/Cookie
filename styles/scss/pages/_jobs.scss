@@ -2,46 +2,60 @@
 
 .open {
   position: relative;
-  background: $gradient;
-    &__label {
+  &__label {
     position: absolute;
     top: 0;
     left: 0;
   }
   &__container {
-    max-width: 1160px;
-    margin-inline: auto;
-    @include adaptive-property(padding-inline, 15, 0, 36);
+    background: $gradient;
     @include adaptive-property(padding-top, 50, 0, 144);
     @include adaptive-property(padding-bottom, 40, 0, 116);
+    @include adaptive-property(padding-inline, 15, 0, 36);
+  }
+  &__content {
+    margin-inline: auto;
+  }
+  &__spollers {
+    max-width: 1160px;
+    margin-inline: auto;
+    background: #ecddce;
+    @include adaptive-property(padding-inline, 30, 0, 75);
+    @include adaptive-property(padding-top, 30, 0, 77);
+    @include adaptive-property(padding-bottom, 40, 0, 88);
   }
 }
 .spoller {
+  max-width: 1010px;
   display: grid;
-  grid-template-rows: minmax(30px, 50px) 0fr;
-  transition: 0.4s ease-in-out;
-}	
+  grid-template-rows: minmax(30px, auto) 0fr;
+  transition: $transition-duraction ease-in-out;
+}
 .spoller.active {
-  grid-template-rows: minmax(30px, 50px) 1fr;
-  transition: 0.4s ease-in;
+  grid-template-rows: minmax(30px, auto) 1fr;
+  transition: $transition-duraction ease-in;
 }
 .spoller__title {
   position: relative;
-  padding: 10px 30px 10px 10px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  font-weight: 700;
+  border-top: 2px solid $text-color-main;
+  @include adaptive-property(padding-block, 0.5, 0, 1.1875, rem);
+  @include adaptive-property(padding-inline, 0.625, 0, 1.3125, rem);
+  @include adaptive-property(font-size, 1.125, 0, 1.5625, rem);
 }
 .spoller__title:before,
 .spoller__title:after {
   content: "";
   position: absolute;
-  right: 15px;
-  top: 25px;
+  right: 27px;
   display: block;
-  width: 25px;
+  width: 20px;
   height: 2px;
-  border-radius: 5px;
-  background-color: #efef;
-  transition: 0.4s ease-in-out;
+  background-color: #000;
+  transition: $transition-duraction ease-in-out;
 }
 .spoller__title:after {
   transform: rotate(-90deg);
@@ -51,4 +65,25 @@
 }
 .spoller__content {
   overflow: hidden;
+  @include adaptive-property(padding-inline, 0.625, 0, 1.3125, rem);
+}
+.spoller__text {
+  p {
+    line-height: 166.666667%; /* 30px/18 */
+  }
+  p:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+}
+.spoller__subtitle {
+  font-weight: 700;
+  @include adaptive-property(margin-bottom, 0.5, 0, 0.875, rem);
+}
+.spoller__text,
+.spoller__list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc;
+  @include adaptive-property(margin-bottom, 20, 0, 42);
+  @include adaptive-property(row-gap, 0.375, 0, 0.75, rem);
 }
