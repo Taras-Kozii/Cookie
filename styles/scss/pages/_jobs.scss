@@ -21,19 +21,20 @@
     margin-inline: auto;
     background: #ecddce;
     @include adaptive-property(padding-inline, 30, 0, 75);
-    @include adaptive-property(padding-top, 30, 0, 77);
-    @include adaptive-property(padding-bottom, 40, 0, 88);
+    @include adaptive-property(padding-block, 30, 0, 88);
   }
 }
 .spoller {
   max-width: 1010px;
   display: grid;
-  grid-template-rows: minmax(30px, auto) 0fr;
+  grid-template-rows: minmax(30px, 65px) 0fr;
   transition: $transition-duraction ease-in-out;
 }
 .spoller.active {
-  grid-template-rows: minmax(30px, auto) 1fr;
+  grid-template-rows: minmax(30px, 65px) 1fr;
   transition: $transition-duraction ease-in;
+  @include adaptive-property(padding-bottom, 20, 0, 40);
+
 }
 .spoller__title {
   position: relative;
@@ -46,22 +47,20 @@
   @include adaptive-property(padding-inline, 0.625, 0, 1.3125, rem);
   @include adaptive-property(font-size, 1.125, 0, 1.5625, rem);
 }
-.spoller__title:before,
-.spoller__title:after {
+.spoller__title:before {
   content: "";
   position: absolute;
-  right: 27px;
   display: block;
   width: 20px;
-  height: 2px;
-  background-color: #000;
+  height: 9px;
   transition: $transition-duraction ease-in-out;
+  background-image: url('../../images/icons/arrow-down.svg');
+  background-position: center;
+  background-size: cover;
+  @include adaptive-property(right, 0, 0, 27);
 }
-.spoller__title:after {
-  transform: rotate(-90deg);
-}
-.spoller.active .spoller__title:after {
-  transform: rotate(0deg);
+.spoller.active .spoller__title:before {
+  transform: rotate(180deg);
 }
 .spoller__content {
   overflow: hidden;
@@ -86,4 +85,9 @@
   list-style-type: disc;
   @include adaptive-property(margin-bottom, 20, 0, 42);
   @include adaptive-property(row-gap, 0.375, 0, 0.75, rem);
+}
+.spoller__button {
+  min-width: 245px;
+  max-width: max-content;
+  margin-inline: auto;
 }
