@@ -1,0 +1,54 @@
+@use "../utils/_index.scss" as *;
+
+.open {
+  position: relative;
+  background: $gradient;
+    &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__container {
+    max-width: 1160px;
+    margin-inline: auto;
+    @include adaptive-property(padding-inline, 15, 0, 36);
+    @include adaptive-property(padding-top, 50, 0, 144);
+    @include adaptive-property(padding-bottom, 40, 0, 116);
+  }
+}
+.spoller {
+  display: grid;
+  grid-template-rows: minmax(30px, 50px) 0fr;
+  transition: 0.4s ease-in-out;
+}	
+.spoller.active {
+  grid-template-rows: minmax(30px, 50px) 1fr;
+  transition: 0.4s ease-in;
+}
+.spoller__title {
+  position: relative;
+  padding: 10px 30px 10px 10px;
+  cursor: pointer;
+}
+.spoller__title:before,
+.spoller__title:after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  display: block;
+  width: 25px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #efef;
+  transition: 0.4s ease-in-out;
+}
+.spoller__title:after {
+  transform: rotate(-90deg);
+}
+.spoller.active .spoller__title:after {
+  transform: rotate(0deg);
+}
+.spoller__content {
+  overflow: hidden;
+}

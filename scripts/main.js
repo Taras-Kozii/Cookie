@@ -13,6 +13,34 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initHeader();
   initForms();
+  const spollersBlock = document.querySelector('.spollers');
+const spollersTitle = spollersBlock.querySelectorAll('.spoller__title');
+
+if (spollersTitle.length) {
+  for (const title of spollersTitle) {
+    title.addEventListener('click', e => {
+      setActionSpoller(e);
+    });
+  }
+}
+
+function setActionSpoller(e) {
+  const isAccordion = spollersBlock.hasAttribute('data-accordion');
+  
+  if (isAccordion) {
+    const prevSpoller = document.querySelector('.spoller.active');
+    toggleSpoller(e);
+    prevSpoller ? prevSpoller.classList.remove('active') : null;  
+  } else {
+     toggleSpoller(e);
+  }
+}
+
+function toggleSpoller(e) {
+  const spoller = e.target.closest('.spoller');
+  spoller.classList.toggle('active');
+}
+
   // new SimpleParallax(document.querySelectorAll('.parallax-img'), {
   //   delay: 0.6,
   //   orientation: 'down',
