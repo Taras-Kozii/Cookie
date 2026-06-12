@@ -4,6 +4,7 @@ import { initNavigation } from './menu.js';
 import { initHeader } from './header.js';
 import { activeLink } from './functions.js';
 import { initForms } from './forms.js';
+import { initSpollers } from './spollers.js';
 // import { VanillaTilt } from './effects/tilt/vanilla-tilt.js';
 // import SimpleParallax from './effects/simpleParallax/index.js';
 // import { watcherAnim, watcherToggle, countAnimate } from './animation.js';
@@ -13,34 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initHeader();
   initForms();
-  const spollersBlock = document.querySelector('.spollers');
-const spollersTitle = spollersBlock.querySelectorAll('.spoller__title');
-
-if (spollersTitle.length) {
-  for (const title of spollersTitle) {
-    title.addEventListener('click', e => {
-      setActionSpoller(e);
-    });
-  }
-}
-
-function setActionSpoller(e) {
-  const isAccordion = spollersBlock.hasAttribute('data-accordion');
-  
-  if (isAccordion) {
-    const prevSpoller = document.querySelector('.spoller.active');
-    toggleSpoller(e);
-    prevSpoller ? prevSpoller.classList.remove('active') : null;  
-  } else {
-     toggleSpoller(e);
-  }
-}
-
-function toggleSpoller(e) {
-  const spoller = e.target.closest('.spoller');
-  spoller.classList.toggle('active');
-}
-
+  initSpollers();
   // new SimpleParallax(document.querySelectorAll('.parallax-img'), {
   //   delay: 0.6,
   //   orientation: 'down',

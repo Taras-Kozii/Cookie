@@ -15,24 +15,31 @@
   background: $gradient;
   &__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap-reverse;
+    @include on-mobile-l {
+      flex-wrap:nowrap;
+    }
   }
   &__img {
     aspect-ratio: 1 / 1;
-    max-width: 47.78vw;
+    width: 100%;
+    @include on-mobile-l {
+      max-width: 47%;
+    }
     @include ibg(cover);
   }
   &__text-content {
-    max-width: 392px;
-    justify-self: flex-end;
-    margin-right: auto;
+    max-width: 464px;
+    margin-top: 30px;
+    @include adaptive-property(padding-inline, 15, 0, 36);
   }
   &__header {
-    @include adaptive-property(margin-bottom, 1.375r, 0, 3.25, rem);
+    @include adaptive-property(margin-bottom, 1.375, 0, 3.25, rem);
   }
   &__title {
-    @include adaptive-property(font-size, 1.375r, 0, 3.125, rem);
+    @include adaptive-property(font-size, 1.375, 0, 3.125, rem);
   }
   &__button {
     span {
@@ -170,4 +177,34 @@
   &__link {
     @include adaptive-property(margin-bottom, 0.5, 0, 1, rem);
   }
+}
+.cookies {
+  &__content {
+    max-width: 986px;
+    margin-inline: auto;
+    row-gap: 1rem;
+    @include adaptive-property(padding-block, 30, 0, 92);
+  }
+}
+.cookie {
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  &__title {
+    font-weight: 700;
+    @include adaptive-property(font-size, 0.875, 0,  1.875, rem);
+    @include adaptive-property(margin-bottom, 0.75, 0, 1.6875, rem);
+  }
+  &__img {
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    @include ibg(contain);
+  }
+  &__body {
+    max-width: 473px;
+    @include adaptive-property(padding-inline, 15, 0, 36);
+  }
+}
+.cookie:nth-child(odd) {
+  flex-direction: row-reverse;
 }
