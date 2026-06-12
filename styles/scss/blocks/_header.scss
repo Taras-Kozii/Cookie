@@ -7,7 +7,6 @@
   left: 0;
   z-index: 50;
   transition: $transition-duraction;
-  background-color: #fff;
 
   &__container {
     max-width: 1366px;
@@ -36,11 +35,11 @@
 }
 
 .header.scrolling {
-  background: rgb(255, 255, 255, 0.5);
+  background: rgba(79, 79, 84, 0.2);
   backdrop-filter: blur(18px);
 }
 
-// .header.hidden {
-//   opacity: 0;
-//   transform: translateY(-30px);
-// }
+.header.hidden {
+  opacity: 0;
+  transform: translateY(-30px);
+}

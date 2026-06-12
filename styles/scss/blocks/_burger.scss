@@ -16,6 +16,8 @@ $radius: 0;
 }
 
 .burger {
+  position: relative;
+  z-index: 5;
   span {
     @extend %menu-dash;
     margin-top: calc($line-height / -2);
