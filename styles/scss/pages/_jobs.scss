@@ -1,6 +1,6 @@
 @use "../utils/_index.scss" as *;
 
-.open {
+.open-jobs {
   position: relative;
   &__label {
     position: absolute;
@@ -34,7 +34,6 @@
   grid-template-rows: minmax(30px, 65px) 1fr;
   transition: $transition-duraction ease-in;
   @include adaptive-property(padding-bottom, 20, 0, 40);
-
 }
 .spoller__title {
   position: relative;
@@ -54,7 +53,7 @@
   width: 20px;
   height: 9px;
   transition: $transition-duraction ease-in-out;
-  background-image: url('../../images/icons/arrow-down.svg');
+  background-image: url("../../images/icons/arrow-down.svg");
   background-position: center;
   background-size: cover;
   @include adaptive-property(right, 0, 0, 27);

@@ -1,53 +1,53 @@
 @use "../utils/_index.scss" as *;
 
 .menu {
-  @media (max-width: 1024.9px) {
-    &__body {
+  --gradient: linear-gradient(0deg, #ffb99a 0%, #ffdbc5 100%);
+
+  &__body {
+    @media (max-width: 1024.9px) {
       position: fixed;
-      top: 0;
       left: -100%;
+      top: 0;
       width: 100%;
       height: 100svh;
       padding: 100px 30px 30px;
-      background: $gradient;
-      transition: $transition-duraction;
-      overflow: auto;
-
-      &::before {
-        content: "";
-        position: fixed;
-        width: 100%;
-        height: 80px;
-        left: -100%;
-        top: 0;
-        backdrop-filter: blur(5px);
-        transition: $transition-duraction;
-        z-index: 2;
-      }
+      transition: $transition-duraction ease-in-out;
+      background: var(--gradient);
+      overflow-y: auto;
+      z-index: 2;
     }
-
-    &__list {
+    &::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      min-height: 80px;
+      left: -100%;
+      top: 0;
+      transition: $transition-duraction;
+      backdrop-filter: blur(18px);
+      z-index: 4;
+    }
+  }
+  &__list {
+    @media (max-width: 1024.9px) {
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       row-gap: 2rem;
     }
-  }
-
-  @media (min-width: 1025px) {
-    &__list {
+    @media (min-width: 1024.9px) {
       padding-block: 0.5rem;
       display: flex;
       flex-direction: row;
       align-items: center;
       flex-wrap: wrap;
-      column-gap: 64px;
       row-gap: 1.5rem;
+      @include adaptive-property(column-gap, 32, 0, 64);
     }
   }
-
   &__link {
-    display: block;
+    display: inline-block;
     font-weight: 400;
     color: $text-color-main;
     @include adaptive-property(font-size, 1.5, 0, 1.25, rem);
