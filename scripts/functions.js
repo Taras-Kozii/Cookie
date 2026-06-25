@@ -1,10 +1,13 @@
 'use strict';
- import { page, header } from './vars.js';
+
+import { page, header } from './vars.js';
 
 export function getScrollValue(link) {
   const block = document.querySelector(link.dataset.goto);
-  const scrollValue = block.getBoundingClientRect().top + window.scrollY - header.offsetHeight;
-  return scrollValue || 0;
+
+  if (!block) return 0;
+
+  return ( block.getBoundingClientRect().top + window.scrollY - header.offsetHeight);
 }
 export function scrollToBlock(link) {
   const scrollValue = getScrollValue(link);
@@ -13,12 +16,6 @@ export function scrollToBlock(link) {
     top: scrollValue,
   });
 }
-// export function getDigFromString(item) {
-//   return parseInt(item.replace(/[^\d]/g, ''))
-// }
-// export function getDigFormat(item, sepp = ' ') {
-//   return item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, `$1${sepp}`);
-// }
 export function lockPage() {
   const rightPaddingValue = window.innerWidth - document.documentElement.clientWidth + 'px';
   setFixPadding(rightPaddingValue);
@@ -32,18 +29,12 @@ export function lockPage() {
   }
 }
 }
-
-export function activeLink() {
-    const currentUrl = window.location.pathname;
-
-    document.querySelectorAll('.menu__link').forEach(link => {
-        const linkUrl = new URL(link.href).pathname;
-
-        if (linkUrl === currentUrl) {
-            link.classList.add('active');
-        }
-    });
-}
+// export function getDigFromString(item) {
+//   return parseInt(item.replace(/[^\d]/g, ''))
+// }
+// export function getDigFormat(item, sepp = ' ') {
+//   return item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, `$1${sepp}`);
+// }
 // export function setCSSProperty(item, property, value) {
 //   item.style.setProperty(property, value);
 // }

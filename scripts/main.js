@@ -2,7 +2,6 @@
 
 import { initNavigation } from './menu.js';
 import { initHeader } from './header.js';
-import { activeLink } from './functions.js';
 import { initForms } from './forms.js';
 import { initSpollers } from './spollers.js';
 // import { VanillaTilt } from './effects/tilt/vanilla-tilt.js';
@@ -10,7 +9,6 @@ import { initSpollers } from './spollers.js';
 // import { watcherAnim, watcherToggle, countAnimate } from './animation.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  activeLink();
   initNavigation();
   initHeader();
   initForms();
