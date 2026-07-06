@@ -41,10 +41,11 @@
   align-items: center;
   cursor: pointer;
   font-weight: 700;
+  margin-right: 0.5rem;
   border-top: 2px solid $text-color-main;
   @include adaptive-property(padding-block, 0.5, 0, 1.1875, rem);
   @include adaptive-property(padding-inline, 0.625, 0, 1.3125, rem);
-  @include adaptive-property(font-size, 1.125, 0, 1.5625, rem);
+  @include adaptive-property(font-size, 0.8, 0, 1.5625, rem);
 }
 .spoller__title:before {
   content: "";

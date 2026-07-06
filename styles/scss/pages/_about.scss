@@ -10,7 +10,7 @@
     left: 0;
   }
   &__container {
-    max-width: #{$container-pink-l};
+    max-width: #{$container-pink-l}px;
     margin-inline: auto;
     overflow-x: clip;
     @include adaptive-property(padding-inline, 15, 0, 36);
@@ -40,6 +40,7 @@
     @include adaptive-property(margin-bottom, 14, 0, 28);
   }
   &__title {
+    text-align: center;
     @include adaptive-property(margin-bottom, 20, 0, 40);
   }
   &__text {

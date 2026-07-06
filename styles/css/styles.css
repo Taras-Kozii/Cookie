@@ -1083,6 +1083,8 @@ h6 {
   }
 }
 .hero-page__img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   aspect-ratio: 750/500;
   translate: 0 20%;
   width: 750px;
@@ -1215,7 +1217,7 @@ h6 {
   left: 0;
 }
 .values__container {
-  max-width: 1315;
+  max-width: 1315px;
   margin-inline: auto;
   overflow-x: clip;
   padding-inline: 36px;
@@ -1298,6 +1300,7 @@ h6 {
   }
 }
 .card-values__title {
+  text-align: center;
   margin-bottom: 40px;
 }
 @media (max-width: 1466px) {
@@ -2044,7 +2047,7 @@ h6 {
 }
 @media (max-width: 1466px) {
   .how__item::before {
-    font-size: calc(0.9375rem + (0.9375) * (100vw - 20rem) / (71.625));
+    font-size: calc(0.6rem + (1.275) * (100vw - 20rem) / (71.625));
   }
 }
 .how__item::before {
@@ -2171,6 +2174,7 @@ h6 {
           align-items: center;
   cursor: pointer;
   font-weight: 700;
+  margin-right: 0.5rem;
   border-top: 2px solid #000;
   padding-block: 1.1875rem;
 }
@@ -2192,7 +2196,7 @@ h6 {
 }
 @media (max-width: 1466px) {
   .spoller__title {
-    font-size: calc(1.125rem + (0.4375) * (100vw - 20rem) / (71.625));
+    font-size: calc(0.8rem + (0.7625) * (100vw - 20rem) / (71.625));
   }
 }
 

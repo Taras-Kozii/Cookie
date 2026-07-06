@@ -46,7 +46,7 @@
       text-transform: uppercase;
       color: $text-color-white;
       background-color: $text-color-main;
-      @include adaptive-property(font-size, 0.9375, 0, 1.875, rem);
+      @include adaptive-property(font-size, 0.6, 0, 1.875, rem);
       @include adaptive-property(padding-inline, 16, 0, 35);
       @include adaptive-property(padding-block, 12, 0, 27);
     }
