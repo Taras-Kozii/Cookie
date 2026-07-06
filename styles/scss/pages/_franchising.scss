@@ -29,7 +29,7 @@
   }
   &__item {
     position: relative;
-    background: #ecddce;
+    background: $bg-color-order;
     counter-increment: step;
     @include adaptive-property(padding-top, 22, 0, 37);
     @include adaptive-property(padding-bottom, 32, 0, 68);
@@ -44,7 +44,7 @@
       display: block;
       font-weight: 700;
       text-transform: uppercase;
-      color: #fff;
+      color: $text-color-white;
       background-color: $text-color-main;
       @include adaptive-property(font-size, 0.9375, 0, 1.875, rem);
       @include adaptive-property(padding-inline, 16, 0, 35);

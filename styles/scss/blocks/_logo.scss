@@ -1,9 +1,18 @@
 @use "../utils/_index.scss" as *;
 
 .logo {
-  @include adaptive-property(width, 90, 0, 180);
-  @include adaptive-property(height, 25, 0, 52);
+  flex-shrink: 0;
+  @include adaptive-property(width, 120, 0, 180);
+  @include adaptive-property(height, 35, 0, 52);
   @include ibg(contain);
+  img {
+    transition: $transition-duraction linear;
+  }
+
+  @include hover-pseudo(" img") {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(100%) saturate(7495%)
+      hue-rotate(0deg) brightness(100%) contrast(120%);
+  }
 }
 .logo--footer {
   @include adaptive-property(width, 125, 0, 250);

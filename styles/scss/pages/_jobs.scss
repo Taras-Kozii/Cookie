@@ -19,7 +19,7 @@
   &__spollers {
     max-width: 1160px;
     margin-inline: auto;
-    background: #ecddce;
+    background: $bg-color-order;
     @include adaptive-property(padding-inline, 30, 0, 75);
     @include adaptive-property(padding-block, 30, 0, 88);
   }

@@ -2,7 +2,7 @@
 
 .home {
   &__container {
-    max-width: 1315px;
+    max-width: #{$container-pink-l}px;
     margin-inline: auto;
     overflow-x: clip;
     @include adaptive-property(padding-inline, 15, 0, 36);
@@ -19,7 +19,7 @@
     align-items: center;
     flex-wrap: wrap-reverse;
     @include on-mobile-l {
-      flex-wrap:nowrap;
+      flex-wrap: nowrap;
     }
   }
   &__img {
@@ -188,11 +188,11 @@
 }
 .cookie {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
   &__title {
     font-weight: 700;
-    @include adaptive-property(font-size, 0.875, 0,  1.875, rem);
+    @include adaptive-property(font-size, 0.875, 0, 1.875, rem);
     @include adaptive-property(margin-bottom, 0.75, 0, 1.6875, rem);
   }
   &__img {

@@ -1,7 +1,7 @@
 @use "../utils/_index" as *;
 
 .order {
-  background: #ecddce;
+  background: $bg-color-order;
   &__container {
     max-width: 715px;
     margin-inline: auto;

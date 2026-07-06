@@ -1,7 +1,9 @@
+@use "../utils/_index.scss" as *;
+
 $menu-size: 40px;
 $line-height: 3px;
 $gap: calc($line-height * 5);
-$bg-color: #000;
+$bg-color: $bg-color-dark;
 $radius: 0;
 
 %menu-dash {

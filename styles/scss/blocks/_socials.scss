@@ -22,10 +22,10 @@
     }
     svg {
       @include hover-pseudo(" g") {
-        fill: #dc754f;
+        fill: $color-red;
       }
       @include hover-pseudo(" path") {
-        fill: #dc754f;
+        fill: $color-red;
       }
     }
   }

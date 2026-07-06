@@ -79,12 +79,6 @@
     @content;
   }
 }
-
-// @mixin on-laptop {
-//   @media (max-width: 1024px) {
-//     @content;
-//   }
-// }
 @mixin on-mobile-l {
   @media (min-width: #{$mobile-l}px) {
     @content;
@@ -105,24 +99,6 @@
   justify-content: $x;
   align-items: $y;
 }
-
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// GRID
-// @mixin grid-cards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
-//   display: grid;
-//   min-width: 0;
-//   gap: $gap;
-//   grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
-// }
-
-// @mixin grid-container($quantity) {
-//   display: grid;
-//   min-width: 0;
-//   grid-template-columns: repeat($quantity, minmax(280px, 1fr));
-// }
-
-// HOVER
-// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 @mixin hover() {
   @media (hover: hover) and (pointer: fine) {
     &:hover,

@@ -84,3 +84,15 @@ function setActiveSectionLink() {
 
   sections.forEach(section => observer.observe(section));
 }
+// Якщо в меню в нас є посилання на сторінки та на окрему секцію на сторінці
+// то в html файлі іншої сторінки до посилання не додаємо data атрибут і шлях починається з слеша
+// ПРИКЛАД
+// <a href="/#cookies" class="menu__link link"><span>Cookies</span></a>
+
+// ПРИКЛАД для сторінки з навігацією на секцію
+/* <a
+  href="#locations"
+  class="menu__link link"
+  data-goto="#locations"
+  ><span>Locations</span></a
+  > */

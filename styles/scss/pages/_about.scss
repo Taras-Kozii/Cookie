@@ -10,7 +10,7 @@
     left: 0;
   }
   &__container {
-    max-width: 1315px;
+    max-width: #{$container-pink-l};
     margin-inline: auto;
     overflow-x: clip;
     @include adaptive-property(padding-inline, 15, 0, 36);
@@ -31,7 +31,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ecddce;
+  background-color: $bg-color-order;
   @include adaptive-property(padding-inline, 20, 0, 52);
   @include adaptive-property(padding-block, 26, 0, 56);
   &__img {
