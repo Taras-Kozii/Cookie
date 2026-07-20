@@ -11,3 +11,12 @@
     @include adaptive-property(font-size, 0.875, 0, 1.125, rem);
   }
 }
+.privacy.scroll-anim {
+  transition: 450ms linear 0.3s;
+  opacity: 0;
+  translate: 30px 0;
+}
+.privacy.scroll-anim.active {
+  opacity: 1;
+  translate: 0 0;
+}

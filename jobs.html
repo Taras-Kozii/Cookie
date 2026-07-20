@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cookie Coutre | Jobs</title>
     <link
+      rel="preload"
+      as="image"
+      href="./images/logo-header.webp"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/jobs.webp"
+      type="image/webp"
+    />
+    <link
       rel="shortcut icon"
       href="./images/icons/favicon.ico"
       type="image/x-icon"
@@ -102,7 +114,6 @@
                 <img
                   src="./images/jobs.webp"
                   alt="cookie-img"
-                  loading="lazy"
                   decoding="async"
                   width="300"
                   height="250"
@@ -585,7 +596,7 @@
         <div class="footer__container">
           <div class="footer__content">
             <div class="footer__top">
-              <a href="/index.html" class="logo logo--footer">
+              <a href="#" class="logo logo--footer">
                 <img
                   src="./images/logo.webp"
                   alt="cookie-logo"
@@ -596,36 +607,54 @@
                 />
               </a>
               <nav class="footer-menu">
-                <ul class="footer-menu__list">
+                <ul class="footer-menu__list scroll-anim">
                   <li class="footer-menu__item">
-                    <a href="contact.html" class="footer-menu__link link"
+                    <a
+                      href="contact.html"
+                      class="footer-menu__link link"
+                      style="--index: 1"
                       ><span>Contact</span></a
                     >
                   </li>
                   <li class="footer-menu__item">
-                    <a href="#" class="footer-menu__link link"
+                    <a
+                      href="#"
+                      class="footer-menu__link link"
+                      style="--index: 2"
                       ><span>Press</span></a
                     >
                   </li>
                   <li class="footer-menu__item">
-                    <a href="jobs.html" class="footer-menu__link link"
+                    <a
+                      href="jobs.html"
+                      class="footer-menu__link link"
+                      style="--index: 3"
                       ><span>Jobs</span></a
                     >
                   </li>
                   <li class="footer-menu__item">
-                    <a href="franchising.html" class="footer-menu__link link"
+                    <a
+                      href="franchising.html"
+                      class="footer-menu__link link"
+                      style="--index: 4"
                       ><span>Franchise</span></a
                     >
                   </li>
                 </ul>
-                <ul class="footer-menu__list">
+                <ul class="footer-menu__list scroll-anim">
                   <li class="footer-menu__item">
-                    <a href="about.html" class="footer-menu__link link"
+                    <a
+                      href="about.html"
+                      class="footer-menu__link link"
+                      style="--index: 1"
                       ><span>About Us</span></a
                     >
                   </li>
                   <li class="footer-menu__item">
-                    <a href="index.html#cookies" class="footer-menu__link link"
+                    <a
+                      href="index.html#cookies"
+                      class="footer-menu__link link"
+                      style="--index: 2"
                       ><span>Cookie Menu</span></a
                     >
                   </li>
@@ -633,11 +662,15 @@
                     <a
                       href="index.html#locations"
                       class="footer-menu__link link"
+                      style="--index: 3"
                       ><span>Locations</span></a
                     >
                   </li>
                   <li class="footer-menu__item">
-                    <a href="catering.html" class="footer-menu__link link"
+                    <a
+                      href="catering.html"
+                      class="footer-menu__link link"
+                      style="--index: 4"
                       ><span>Catering</span></a
                     >
                   </li>
@@ -659,7 +692,7 @@
             <div class="footer__bottom">
               <div class="socials">
                 <h4 class="socials__title"><strong>Follow us</strong></h4>
-                <ul class="socials__list">
+                <ul class="socials__list scroll-anim">
                   <li class="socials__item">
                     <a
                       href="https://www.instagram.com/accounts/login/"
@@ -733,7 +766,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="privacy">
+              <div class="privacy scroll-anim">
                 <a href="imprint.html" class="privacy__link link"
                   ><span>Imprint</span></a
                 >

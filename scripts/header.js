@@ -17,6 +17,6 @@ window.addEventListener('scroll', (e) => {
 
   clearTimeout(scrollHeaderTimeout);
   scrollHeaderTimeout = setTimeout(() => {
-    header.classList.remove('hidden')}, 300);
+    header.classList.remove('hidden')}, 600);
 });
 }
