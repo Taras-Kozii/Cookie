@@ -211,6 +211,8 @@ h6 {
   color: #000;
   border-radius: 3px;
   border: 1px solid currentColor;
+  opacity: 0;
+  scale: 0;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   cursor: pointer;
@@ -264,6 +266,11 @@ h6 {
   .button:active, .button:focus, .button:focus-within {
     border: 1px solid #dc754f;
   }
+}
+
+.button.active {
+  opacity: 1;
+  scale: 1;
 }
 
 .buttons-lang {
@@ -1046,17 +1053,23 @@ h6 {
 }
 
 .white-section-text.scroll-anim p {
-  -webkit-transition: 450ms linear;
-  transition: 450ms linear;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
   opacity: 0;
-  translate: 0 -30px;
+  -webkit-transform: translateY(-15px);
+      -ms-transform: translateY(-15px);
+          transform: translateY(-15px);
   -webkit-animation-delay: calc(var(--index) * 200ms);
           animation-delay: calc(var(--index) * 200ms);
 }
 
 .white-section-text.scroll-anim p.active {
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
   opacity: 1;
-  translate: 0 0px;
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .only-title {

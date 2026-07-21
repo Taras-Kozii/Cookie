@@ -14,10 +14,13 @@
 
   border-radius: 3px;
   border: 1px solid currentColor;
+  opacity: 0;
+  scale: 0;
   transition: $transition-duraction ease-in-out;
   cursor: pointer;
   overflow: hidden;
   z-index: 2;
+
   span,
   strong {
     position: relative;
@@ -54,4 +57,8 @@
   @include hover {
     border: 1px solid $color-red;
   }
+}
+.button.active {
+  opacity: 1;
+  scale: 1;
 }

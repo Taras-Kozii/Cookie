@@ -44,12 +44,13 @@
   }
 }
 .white-section-text.scroll-anim p {
-  transition: 450ms linear;
+  transition: $transition-duraction linear;
   opacity: 0;
-  translate: 0 -30px;
+  transform: translateY(-15px);
   animation-delay: calc(var(--index) * 200ms);
 }
 .white-section-text.scroll-anim p.active {
+  transition: $transition-duraction linear;
   opacity: 1;
-  translate: 0 0px;
+  transform: translateY(0px);
 }

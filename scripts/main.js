@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   watcherToggle('.footer-menu__list.scroll-anim a', 0.2);
   watcherToggle('.privacy.scroll-anim', 0.2);
   watcherToggle('.socials__list.scroll-anim a', 0.2);
+  watcherToggle('.button', 0.2);
 
   // new SimpleParallax(document.querySelectorAll('.parallax-img'), {
   //   delay: 0.6,
