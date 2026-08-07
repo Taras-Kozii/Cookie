@@ -112,7 +112,11 @@
                 </div>
                 <h1 class="section-header__title">Jobs</h1>
               </div>
-              <div class="hero-page__img">
+              <div
+                class="hero-page__img rellax"
+                data-rellax-speed="-1.5"
+                data-rellax-xs-speed="1"
+              >
                 <img
                   src="./images/jobs.webp"
                   alt="cookie-img"
@@ -784,5 +788,9 @@
       </footer>
     </div>
     <script type="module" src="./scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+      var rellax = new Rellax(".rellax");
+    </script>
   </body>
 </html>
