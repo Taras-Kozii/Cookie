@@ -447,13 +447,13 @@ h6 {
   transition: 450ms linear;
   opacity: 0;
   translate: 0 -30px;
-  -webkit-animation-delay: calc(var(--index) * 200ms);
-          animation-delay: calc(var(--index) * 200ms);
 }
 
 .footer-menu__list.scroll-anim a.active {
   opacity: 1;
   translate: 0 0px;
+  -webkit-transition-delay: calc(var(--index) * 50ms);
+          transition-delay: calc(var(--index) * 50ms);
 }
 
 .header {
@@ -951,13 +951,13 @@ h6 {
   transition: 450ms linear;
   opacity: 0;
   translate: -30px 0;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
 }
 
 .socials__list.scroll-anim a.active {
   opacity: 1;
   translate: 0 0;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 
 .subtitle {
@@ -1059,8 +1059,6 @@ h6 {
   -webkit-transform: translateY(-15px);
       -ms-transform: translateY(-15px);
           transform: translateY(-15px);
-  -webkit-animation-delay: calc(var(--index) * 200ms);
-          animation-delay: calc(var(--index) * 200ms);
 }
 
 .white-section-text.scroll-anim p.active {
@@ -1070,6 +1068,8 @@ h6 {
   -webkit-transform: translateY(0px);
       -ms-transform: translateY(0px);
           transform: translateY(0px);
+  -webkit-transition-delay: calc(var(--index) * 50ms);
+          transition-delay: calc(var(--index) * 50ms);
 }
 
 .only-title {
@@ -2152,6 +2152,40 @@ h6 {
 }
 .how__item-text P:not(:last-child) {
   margin-bottom: 0.625rem;
+}
+
+.how__item.scroll-anim .how__item-title,
+.how__item.scroll-anim .how__item-text {
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  opacity: 0;
+}
+
+.how__item.scroll-anim.active .how__item-title,
+.how__item.scroll-anim.active .how__item-text {
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.how__item.scroll-anim .how__item-title {
+  -webkit-transform: translateY(-15px);
+      -ms-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.how__item.scroll-anim .how__item-text {
+  -webkit-transform: translateY(-45px);
+      -ms-transform: translateY(-45px);
+          transform: translateY(-45px);
+}
+
+.how__item.scroll-anim.active .how__item-text {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
 }
 
 .open-jobs {

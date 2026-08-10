@@ -15,24 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initForms();
   initSpollers();
-  watcherToggle('.white-section-text.scroll-anim p', 0.35);
+  watcherToggle('.white-section-text.scroll-anim p', 0.2);
   watcherToggle('.footer-menu__list.scroll-anim a', 0.2);
   watcherToggle('.privacy.scroll-anim', 0.2);
   watcherToggle('.socials__list.scroll-anim a', 0.2);
   watcherToggle('.button', 0.2);
-
-  // new SimpleParallax(document.querySelectorAll('.parallax-img'), {
-  //   delay: 0.6,
-  //   orientation: 'down',
-  //   scale: 1.4,
-  //   overflow: false,
-  // });
-  // VanillaTilt.init(document.querySelectorAll('.categories__img img'), {
-	// 	max: 20,
-	// 	speed: 300,
-  //   glare: true,
-  //   'max-glare': 0.5,
-  //   'glare-prerender': true,
-	// });
-  // watcherAnim('[data-counter]', 0.2, countAnimate, false);
+  watcherToggle('.how__item.scroll-anim', 0.5);
 });

@@ -47,10 +47,10 @@
   transition: $transition-duraction linear;
   opacity: 0;
   transform: translateY(-15px);
-  animation-delay: calc(var(--index) * 200ms);
 }
 .white-section-text.scroll-anim p.active {
   transition: $transition-duraction linear;
   opacity: 1;
   transform: translateY(0px);
+  transition-delay: calc(var(--index) * 50ms);
 }

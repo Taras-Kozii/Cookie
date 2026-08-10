@@ -69,3 +69,23 @@
     }
   }
 }
+.how__item.scroll-anim .how__item-title,
+.how__item.scroll-anim .how__item-text {
+  transition: $transition-duraction linear;
+  opacity: 0;
+}
+.how__item.scroll-anim.active .how__item-title,
+.how__item.scroll-anim.active .how__item-text {
+  transition: $transition-duraction linear;
+  opacity: 1;
+  transform: translateY(0px);
+}
+.how__item.scroll-anim .how__item-title {
+  transform: translateY(-15px);
+}
+.how__item.scroll-anim .how__item-text {
+  transform: translateY(-45px);
+}
+.how__item.scroll-anim.active .how__item-text {
+  transition-delay: 200ms;
+}
