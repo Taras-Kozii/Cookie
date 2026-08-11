@@ -1383,6 +1383,20 @@ h6 {
   margin-bottom: 0.625rem;
 }
 
+.card-values.scroll-anim .card-values__img {
+  -webkit-transition: 0.3s ease-in-out 150ms;
+  transition: 0.3s ease-in-out 150ms;
+  opacity: 0;
+  scale: 0;
+}
+
+.card-values.scroll-anim.active .card-values__img {
+  -webkit-transition: 0.3s ease-in-out 150ms;
+  transition: 0.3s ease-in-out 150ms;
+  opacity: 1;
+  scale: 1;
+}
+
 .home__container {
   max-width: 1315px;
   margin-inline: auto;

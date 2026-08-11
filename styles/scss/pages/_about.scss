@@ -53,3 +53,13 @@
     }
   }
 }
+.card-values.scroll-anim .card-values__img {
+  transition: $transition-duraction ease-in-out 150ms;
+  opacity: 0;
+  scale: 0;
+}
+.card-values.scroll-anim.active .card-values__img {
+  transition: $transition-duraction ease-in-out 150ms;
+  opacity: 1;
+  scale: 1;
+}
