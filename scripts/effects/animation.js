@@ -62,4 +62,3 @@ export function scrollAnimProperty(selector, percent, property, scrollValue) {
     window.innerHeight - visiblePart || document.documentElement.clientHeight - visiblePart);
 }
 }
-// scrollAnimProperty(title, 0.1, 'transform', `scale(${1 - pageScrollValue / 2100})`);
