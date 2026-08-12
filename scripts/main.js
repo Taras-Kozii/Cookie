@@ -4,7 +4,8 @@ import { initNavigation } from './menu.js';
 import { initHeader } from './header.js';
 import { initForms } from './forms.js';
 import { initSpollers } from './spollers.js';
-import { watcherToggle } from './effects/animation.js';
+import { watcherToggle, scrollAnimProperty } from './effects/animation.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
@@ -19,3 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   watcherToggle('.how__item.scroll-anim', 0.5);
   watcherToggle('.card-values.scroll-anim', 0.35);
 });
+window.addEventListener('scroll', () => {
+  const pageScrollValue = window.scrollY;
+  scrollAnimProperty('.home .hero__img', 0.1, 'translate', `-${1 + pageScrollValue / 10}px 0`);
+  scrollAnimProperty('.home .cookie__img', 0.1, 'scale', `${1 + pageScrollValue / 6500}`);
+});
+

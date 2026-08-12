@@ -199,6 +199,7 @@
     max-width: 350px;
     aspect-ratio: 1 / 1;
     @include ibg(contain);
+    z-index: -1;
   }
   &__body {
     max-width: 473px;
